@@ -3,3 +3,33 @@ $teal: #3F8A7F;
 $green: #989F66;
 $yellow: #EFE3A0;
 $white: #FFFFFF;
+
+main {
+    section:first-of-type {
+        background-color: $green;
+
+        div {
+            background-color: $white;
+            display: flex;
+            flex-flow: column;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            h2 {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-family: 'Cormorant', serif;
+                font-size: 2.4rem;
+            }
+            div:last-of-type {
+                display: flex;
+                flex-flow: row nowrap;
+                img {
+                    width: 40%;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+}

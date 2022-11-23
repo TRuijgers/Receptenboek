@@ -5,7 +5,7 @@ $yellow: #EFE3A0;
 $white: #FFFFFF;
 
 body {
-    font-family: sans-serif;
+    font-family: 'Cormorant', serif;
 }
 
 header {
@@ -24,7 +24,7 @@ header {
         justify-content: flex-end;
         align-items: center;
         div {
-            font-size: 18px;
+            font-size: 20px;
             color: $white;
             margin: 1rem;
         }
@@ -36,7 +36,7 @@ footer {
     display: flex;
     justify-content: center;
     > div {
-        font-size: 18px;
+        font-size: 20px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
