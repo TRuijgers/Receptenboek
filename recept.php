@@ -14,7 +14,9 @@
 
 <body>
     <header>
-        
+        <h1>Receptenboek</h1>
+        <div>Home</div>
+        <div>Contact</div>
     </header>
     <main>
 

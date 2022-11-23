@@ -4,9 +4,39 @@ body {
 
 header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  height: 4rem;
   background-color: #151515;
   color: #FFFFFF;
+}
+header h1 {
+  margin-top: 0.8rem;
+  margin-left: 4rem;
+  justify-content: flex-start;
+}
+header > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header > div div {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 1rem;
+}
+
+footer {
+  background-color: #3F8A7F;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+}
+footer > div {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15%;
 }
 
 *, *::before, *::after {

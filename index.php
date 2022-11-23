@@ -14,9 +14,18 @@
 
 <body>
     <header>
-        <div>Home</div>
-        <div>Contact</div>
+        <h1>Receptenboek</h1>
+        <div>
+            <div>Home</div>
+            <div>Contact</div>
+        </div>
     </header>
+    <footer>
+        <div>
+            <div>Home</div>
+            <div>Contact</div>
+        </div>
+    </footer>
 </body>
 
 </html>
