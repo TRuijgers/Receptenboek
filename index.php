@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receptenboek</title>
     
-    <link href="./css/home/home.css" rel="stylesheet">
+    <link href="./css/home/styles.css" rel="stylesheet">
     
     <script src="./scripts/main.js" defer></script>
 </head>
@@ -14,7 +14,8 @@
 
 <body>
     <header>
-
+        <div>Home</div>
+        <div>Contact</div>
     </header>
 </body>
 

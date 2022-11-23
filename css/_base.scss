@@ -3,3 +3,14 @@ $teal: #3F8A7F;
 $green: #989F66;
 $yellow: #EFE3A0;
 $white: #FFFFFF;
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $black;
+    color: $white;
+}
