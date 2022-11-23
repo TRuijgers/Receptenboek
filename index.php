@@ -14,12 +14,25 @@
 
 <body>
     <header>
-        <h1>Receptenboek</h1>
+        <h1>Recepten</h1>
         <div>
             <div>Home</div>
             <div>Contact</div>
         </div>
     </header>
+    <main>
+        <div>
+            <div>
+                <h1>Welkom bij,<br> Receptenboek</h1>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div class="placeholderdiv"></div>
+                <h2>Placeholder recipe</h2>
+            </div>
+        </div>
+    </main>
     <footer>
         <div>
             <div>Home</div>
