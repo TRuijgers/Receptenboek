@@ -27,7 +27,6 @@
     <main>
         <section id="section1">
             <div>
-                <img src="https://stripedspatula.com/wp-content/uploads/2019/01/general-tsos-chicken-social.jpg" alt="">
                 <h2>
                     General Tso's Chicken
                 </h2>
@@ -36,7 +35,7 @@
         <section id="section2">
             <div>
                 <div>
-                    <img width="1036px" height="542px" src="https://stripedspatula.com/wp-content/uploads/2019/01/general-tsos-chicken-7.jpg" alt="">
+                    <img src="https://stripedspatula.com/wp-content/uploads/2019/01/general-tsos-chicken-7.jpg" alt="">
                     <div>
                         <h3>Benodigdheden:</h3>
                         <ul>                
