@@ -5,31 +5,112 @@ $yellow: #EFE3A0;
 $white: #FFFFFF;
 
 main {
-    section:first-of-type {
+    section:nth-of-type(1) {
         background-color: $green;
-
-        div {
-            background-color: $white;
-            display: flex;
-            flex-flow: column;
-            margin-left: auto;
-            margin-right: auto;
-            width: 70%;
+        min-height: fit-content;
+        > div {
+            width: 80%;
+            position: relative;
+            // background-image: url(https://stripedspatula.com/wp-content/uploads/2019/01/general-tsos-chicken-social.jpg);
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            // background-position: center center;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
             h2 {
+                position: absolute;
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
                 font-family: 'Cormorant', serif;
                 font-size: 2.4rem;
+                width: 100%;
             }
-            div:last-of-type {
+        }
+    }
+    section:nth-of-type(2) {
+        background-color: $teal;
+        flex-flow: column;
+        > div {
+            > div {
+                align-self: center;
+                justify-self: center;
                 display: flex;
                 flex-flow: row nowrap;
+                border-radius: 1rem;
+                border: 1px solid black;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
                 img {
-                    width: 40%;
-                    border-radius: 1rem;
+                    min-height: 30vw;
+                    width: auto;
+                    border-top-left-radius: 1rem;
+                    border-bottom-left-radius: 1rem;
+                }
+                div {
+                    padding-top: 2rem;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    margin-left: auto;
+                    margin-right: auto;
+                    h3 {
+                        text-align: center;
+                    }
+                    ul {
+                        font-family: 'Cormorant', serif;
+                        font-size: 1.2rem;
+                        font-style: italic;
+                        align-self: center;
+                    }
+                    span {
+                        display: block;
+                        border: 0.5px solid black;
+                        border-radius: 50%;
+                    }
                 }
             }
         }
+    }
+    section:nth-of-type(3) {
+        background-color: $yellow;
+        > div {
+            > div {
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                flex-flow: column nowrap;
+                border-radius: 1rem;
+                border: 1px solid black;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    section {
+        display: flex;
+        min-height: 100vh;
+        > div {
+            background-color: $white;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            display: flex;
+            min-height: 100vh;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+    }
+    .section-separator {
+        flex: 0 0 4rem;
+        display: block;
+        height: 0.8rem;
+        background-color: $teal;
+        margin-left: 30rem;
+        margin-right: 30rem;
     }
 }

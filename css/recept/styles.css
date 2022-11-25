@@ -1,28 +1,104 @@
-main section:first-of-type {
+main section:nth-of-type(1) {
   background-color: #989F66;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
-main section:first-of-type div {
-  background-color: #FFFFFF;
-  display: flex;
-  flex-flow: column;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
+main section:nth-of-type(1) > div {
+  width: 80%;
+  position: relative;
 }
-main section:first-of-type div h2 {
+main section:nth-of-type(1) > div img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+main section:nth-of-type(1) > div h2 {
+  position: absolute;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   font-family: "Cormorant", serif;
   font-size: 2.4rem;
+  width: 100%;
 }
-main section:first-of-type div div:last-of-type {
+main section:nth-of-type(2) {
+  background-color: #3F8A7F;
+  flex-flow: column;
+}
+main section:nth-of-type(2) > div > div {
+  align-self: center;
+  justify-self: center;
   display: flex;
   flex-flow: row nowrap;
-}
-main section:first-of-type div div:last-of-type img {
-  width: 40%;
   border-radius: 1rem;
+  border: 1px solid black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section:nth-of-type(2) > div > div img {
+  min-height: 30vw;
+  width: auto;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+main section:nth-of-type(2) > div > div div {
+  padding-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section:nth-of-type(2) > div > div div h3 {
+  text-align: center;
+}
+main section:nth-of-type(2) > div > div div ul {
+  font-family: "Cormorant", serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  align-self: center;
+}
+main section:nth-of-type(2) > div > div div span {
+  display: block;
+  border: 0.5px solid black;
+  border-radius: 50%;
+}
+main section:nth-of-type(3) {
+  background-color: #EFE3A0;
+}
+main section:nth-of-type(3) > div > div {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  border-radius: 1rem;
+  border: 1px solid black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section {
+  display: flex;
+  min-height: 100vh;
+}
+main section > div {
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: flex;
+  min-height: 100vh;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+main .section-separator {
+  flex: 0 0 4rem;
+  display: block;
+  height: 0.8rem;
+  background-color: #3F8A7F;
+  margin-left: 30rem;
+  margin-right: 30rem;
 }
 
 body {
