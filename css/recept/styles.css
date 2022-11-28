@@ -1,13 +1,120 @@
+main section:nth-of-type(1) {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+main section:nth-of-type(1) > div {
+  position: relative;
+  min-height: auto;
+}
+main section:nth-of-type(1) > div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url(https://stripedspatula.com/wp-content/uploads/2019/01/general-tsos-chicken-social.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 37.3rem;
+}
+main section:nth-of-type(1) > div div h2 {
+  color: #EEEDDE;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: "Cormorant", serif;
+  font-size: 3.2rem;
+  width: 100%;
+  text-shadow: 1px 1px #141E27;
+  margin-bottom: 200px;
+}
+main section:nth-of-type(2) {
+  flex-flow: column;
+}
+main section:nth-of-type(2) > div > div {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 1rem;
+  border: 1px solid black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section:nth-of-type(2) > div > div img {
+  min-height: 30vw;
+  width: 40%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+main section:nth-of-type(2) > div > div div {
+  padding-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section:nth-of-type(2) > div > div div h3 {
+  text-align: center;
+}
+main section:nth-of-type(2) > div > div div ul {
+  font-family: "Cormorant", serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  align-self: center;
+}
+main section:nth-of-type(2) > div > div div span {
+  display: block;
+  border: 0.5px solid black;
+  border-radius: 50%;
+}
+main section:nth-of-type(3) > div > div {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  border-radius: 1rem;
+  border: 1px solid black;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section {
+  background-color: rgb(98, 37, 36);
+  display: flex;
+}
+main section > div {
+  background-color: #EEEDDE;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+main .section-separator {
+  flex: 0 0 4rem;
+  display: block;
+  height: 0.8rem;
+  background-color: #E0DDAA;
+  margin: 5rem 30rem;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Cormorant", serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   height: 4rem;
-  background-color: #151515;
-  color: #FFFFFF;
+  background-color: #141E27;
+  color: #EEEDDE;
 }
 header h1 {
   margin-top: 0.8rem;
@@ -20,19 +127,20 @@ header > div {
   align-items: center;
 }
 header > div div {
-  font-size: 18px;
-  color: #FFFFFF;
+  font-size: 20px;
+  color: #EEEDDE;
   margin: 1rem;
 }
 
 footer {
-  background-color: #3F8A7F;
+  background-color: #203239;
+  color: #EEEDDE;
   height: 4rem;
   display: flex;
   justify-content: center;
 }
 footer > div {
-  font-size: 18px;
+  font-size: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

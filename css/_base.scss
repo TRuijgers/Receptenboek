@@ -1,11 +1,11 @@
-$black: #151515;
-$teal: #3F8A7F;
-$green: #989F66;
-$yellow: #EFE3A0;
-$white: #FFFFFF;
+$black: #141E27;
+$blue: #203239;
+$brown: #9f9466;
+$yellow: #E0DDAA;
+$white: #EEEDDE;
 
 body {
-    font-family: sans-serif;
+    font-family: 'Cormorant', serif;
 }
 
 header {
@@ -24,19 +24,20 @@ header {
         justify-content: flex-end;
         align-items: center;
         div {
-            font-size: 18px;
+            font-size: 20px;
             color: $white;
             margin: 1rem;
         }
     }
 }
 footer {
-    background-color: $teal;
+    background-color: $blue;
+    color: $white;
     height: 4rem;
     display: flex;
     justify-content: center;
     > div {
-        font-size: 18px;
+        font-size: 20px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
