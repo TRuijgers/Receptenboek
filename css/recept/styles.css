@@ -149,10 +149,10 @@ header > div div {
 
 footer {
   background-color: #203239;
-  color: #EEEDDE;
   height: 4rem;
   display: flex;
   justify-content: center;
+  color: #EEEDDE;
 }
 footer > div {
   font-size: 20px;
