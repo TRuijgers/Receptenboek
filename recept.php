@@ -1,3 +1,7 @@
+<?php
+require_once('./recipebook/recipebook.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +33,9 @@
             <div>
                 <div>
                     <h2>
-                        General Tso's Chicken
+                        <?php 
+                        echo $rows[0]['title'];
+                        ?>
                     </h2>
                 </div>
                 <span class="section-separator"></span>

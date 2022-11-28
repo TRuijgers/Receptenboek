@@ -1,3 +1,6 @@
+<?php
+require_once('./recipebook/recipebook.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
