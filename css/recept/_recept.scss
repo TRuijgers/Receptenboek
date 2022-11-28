@@ -5,13 +5,12 @@ $bright-red: rgb(154, 4, 2);
 $brown: #9f9466;
 $yellow: #E0DDAA;
 $white: #EEEEEE;
-$light-gray: rgb(192, 191, 191);
+$light-gray: rgb(172, 172, 172);
 
 main {
     section:nth-of-type(1) {
         min-height: fit-content;
         > div {
-            position: relative;
             min-height: auto;
             div {
                 display: flex;
@@ -87,7 +86,7 @@ main {
                 box-shadow: 0px 0px 8px $light-gray;
                 background-color: $white;
                 font-size: 1.1rem;
-                padding: 0.5rem 0.5rem 1rem 0.5rem;
+                padding: 0.6rem 0.6rem 1.1rem 0.6rem;
                 width: 80%;
                 margin-left: auto;
                 margin-right: auto;
@@ -130,5 +129,6 @@ main {
         display: block;
         border: 0.5px solid black;
         border-radius: 50%;
+        margin-bottom: 0.2rem;
     }
 }
