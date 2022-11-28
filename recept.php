@@ -1,5 +1,7 @@
 <?php
 require_once('./recipebook/recipebook.php');
+$databaseHost = Recipebook::connectToDatabase();
+$recipeData = Recipebook::fetchRecipe($databaseHost);
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ require_once('./recipebook/recipebook.php');
                 <div>
                     <h2>
                         <?php 
-                        echo $rows[0]['title'];
+                        echo $recipeData[0]['title'];
                         ?>
                     </h2>
                 </div>
