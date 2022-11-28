@@ -27,9 +27,12 @@
     <main>
         <section id="section1">
             <div>
-                <h2>
-                    General Tso's Chicken
-                </h2>
+                <div>
+                    <h2>
+                        General Tso's Chicken
+                    </h2>
+                </div>
+                <span class="section-separator"></span>
             </div>
         </section>
         <section id="section2">

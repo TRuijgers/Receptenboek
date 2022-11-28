@@ -6,8 +6,8 @@ header {
   display: flex;
   justify-content: space-between;
   height: 4rem;
-  background-color: #151515;
-  color: #FFFFFF;
+  background-color: #141E27;
+  color: #EEEDDE;
 }
 header h1 {
   margin-top: 0.8rem;
@@ -21,12 +21,13 @@ header > div {
 }
 header > div div {
   font-size: 20px;
-  color: #FFFFFF;
+  color: #EEEDDE;
   margin: 1rem;
 }
 
 footer {
-  background-color: #3F8A7F;
+  background-color: #203239;
+  color: #EEEDDE;
   height: 4rem;
   display: flex;
   justify-content: center;
