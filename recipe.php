@@ -1,7 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 require_once('./recipebook/recipebook.php');
-$databaseHost = Recipebook::connectToDatabase();
-$recipeData = Recipebook::fetchRecipe($databaseHost);
+require_once('./recipebook/connect.php');
+
+$mapper = Connection::connectToDB();
+$recipe = $mapper->fetchRecipe(1);
+$ingredients = $mapper->fetchData(1, 'ingredients');
+$preparation = $mapper->fetchData(1, 'preparation');
+$images = $mapper->fetchData(1, 'images');
 
 ?>
 <!DOCTYPE html>
@@ -33,24 +38,35 @@ $recipeData = Recipebook::fetchRecipe($databaseHost);
     <main>
         <section id="section1">
             <div>
-                <div>
-                    <h2>
-                        <?php 
-                        echo $recipeData[0]['title'];
-                        ?>
-                    </h2>
-                </div>
+                <?php 
+                    $img1 = $images[0]['path'];
+                    $title = $recipe[0]['title'];
+                    echo "
+                    <div style=\"background-image: url($img1)\">
+                        <h2>
+                            $title
+                        </h2>
+                    </div>"
+                ?>
                 <span class="section-separator"></span>
             </div>
         </section>
         <section id="section2">
             <div>
                 <div>
-                    <img src="https://stripedspatula.com/wp-content/uploads/2019/01/general-tsos-chicken-7.jpg" alt="">
+                    <?php 
+                        $img2 = $images[1]['path'];
+                        echo "<img src=\"$img2\" alt=\"\">"
+                    ?>
                     <div>
                         <h3>Benodigdheden:</h3>
-                        <ul>                
-                            <li>Kipfilet</li>
+                        <ul>
+                            <?php 
+                                foreach ($ingredients as $key=>$value){
+                                    echo "<li>${value['name']}</li><span class='li-separator'></span>";
+                                }
+                            ?>
+                            <!-- <li>Kipfilet</li>
                             <span class="li-separator"></span>
                             <li>Maïzena</li>
                             <span class="li-separator"></span>
@@ -71,7 +87,7 @@ $recipeData = Recipebook::fetchRecipe($databaseHost);
                             <li>Knoflook poeder</li>
                             <span class="li-separator"></span>
                             <li>Gedroogde of vermalen rode peper</li>
-                            <span class="li-separator"></span>
+                            <span class="li-separator"></span> -->
                         </ul>
                     </div>
                 </div>
@@ -83,7 +99,12 @@ $recipeData = Recipebook::fetchRecipe($databaseHost);
                 <div>
                     <h3>Bereidingswijze:</h3>
                     <ol>
-                        <li>Klop 4 eetlepels sojasaus, 4 eetlepels rijstazijn, 4 eetlepels hoisinsaus, 4 eetlepels bruine suiker, 1 eetlepel gemberpasta en ¼ kopje kippenbouillon samen in een kom. Opzij zetten.</li>
+                    <?php 
+                        foreach ($preparation as $key=>$value){
+                            echo "<li>${value['description']}</li><span class='li-separator'></span>";
+                        }
+                    ?>
+                        <!-- <li>Klop 4 eetlepels sojasaus, 4 eetlepels rijstazijn, 4 eetlepels hoisinsaus, 4 eetlepels bruine suiker, 1 eetlepel gemberpasta en ¼ kopje kippenbouillon samen in een kom. Opzij zetten.</li>
                         <span class="li-separator"></span>
                         <li>Voeg ¼ kopje maizena toe aan een kleine kom. Gooi de stukjes kip in het maizena tot ze volledig bedekt zijn. Laat ze voorlopig in de kom.</li>
                         <span class="li-separator"></span>
@@ -96,7 +117,7 @@ $recipeData = Recipebook::fetchRecipe($databaseHost);
                         <li>Als de saus is ingedikt, doe je de stukjes kip terug in de pan. Gooi om de krokant gebakken kip grondig te coaten voor het serveren.</li>
                         <span class="li-separator"></span>
                         <li>Haal de pan van het vuur en giet de mix over rijst om te serveren. Garneer met gehakte groene uien of sesamzaadjes indien gewenst.</li>
-                        <span class="li-separator"></span>
+                        <span class="li-separator"></span> -->
                     </ol>
                 </div>
                 <span class="section-separator"></span>

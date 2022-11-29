@@ -83,7 +83,7 @@ header {
   justify-content: space-between;
   height: 4rem;
   background-color: #141E27;
-  color: #EEEDDE;
+  color: #EEEEEE;
 }
 header h1 {
   margin-top: 0.8rem;
@@ -97,13 +97,13 @@ header > div {
 }
 header > div div {
   font-size: 20px;
-  color: #EEEDDE;
+  color: #EEEEEE;
   margin: 1rem;
 }
 
 footer {
   background-color: #203239;
-  color: #EEEDDE;
+  color: #EEEEEE;
   height: 4rem;
   display: flex;
   justify-content: center;

@@ -17,7 +17,6 @@ main {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                background-image: url(https://stripedspatula.com/wp-content/uploads/2019/01/general-tsos-chicken-social.jpg);
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -31,7 +30,7 @@ main {
                     font-family: 'Cormorant', serif;
                     font-size: 3.2rem;
                     width: 100%;
-                    text-shadow: 2px 1px $black;
+                    text-shadow: 1px 1px $black;
                     margin-bottom: 250px;
                 }
             }
