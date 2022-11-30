@@ -36,7 +36,10 @@ main ul li {
   margin: 2rem;
   display: flex;
 }
-main ul li .recipe {
+main ul li a {
+  text-decoration: none;
+}
+main ul li a div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,17 +48,17 @@ main ul li .recipe {
   border-radius: 1rem;
   background-color: #EEEDDE;
 }
-main ul li .recipe h3 {
-  font-size: 12px;
+main ul li a div h3 {
+  font-size: 0.7rem;
   color: #EEEDDE;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   font-weight: 600;
   display: none;
 }
-main ul li .recipe:hover {
+main ul li div:hover {
   opacity: 0.8;
 }
-main ul li .recipe:hover h3 {
+main ul li div:hover h3 {
   display: inline;
 }
 main ul li .chicken {

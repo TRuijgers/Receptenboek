@@ -1,5 +1,6 @@
 <?php
 require_once('./recipebook/recipebook.php');
+require_once('./homepage/homepage.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,27 +36,33 @@ require_once('./recipebook/recipebook.php');
         </div>
         <ul>
             <li>
-                <div class="recipe chicken">
-                    <h3>General Tso's Chicken</h3>
-                </div>
+                <a href="?link=1">
+                    <div class="chicken">
+                        <h3>General Tso's Chicken</h3>
+                    </div>
+                </a>
                 <div>
                     <h2>Placeholder recipe</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
                 </div>
             </li>
             <li>
-                <div class="recipe fish">
-                    <h3>Fish</h3>
-                </div>
+                <a href="http://localhost/dashboard/receptenboek/recipe.php">
+                    <div class="fish">
+                        <h3>Fish</h3>
+                    </div>
+                </a>
                 <div>
                     <h2>Placeholder recipe</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
                 </div>
             </li>
             <li>
-                <div class="recipe rice">
-                    <h3>Rijst</h3>
-                </div>
+                <a href="http://localhost/dashboard/receptenboek/recipe.php">
+                    <div class="rice">
+                        <h3>Rijst</h3>
+                    </div>
+                </a>
                 <div>
                     <h2>Placeholder recipe</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
@@ -69,7 +76,7 @@ require_once('./recipebook/recipebook.php');
             <div>Contact</div>
         </div>
     </footer>
-
+    <?php getButtonPressed(); ?>
 </body>
 
 </html>
