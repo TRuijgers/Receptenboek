@@ -33,12 +33,12 @@ class Recipebook {
     //     return $statement->fetchAll();
     // }
     public function fetchJoinedData(int $id, string $table) : array{
-        $b_column = 'recipes_' . $table;
+        $b_table = 'recipes_' . $table;
         $column = $table . '_id';
-        $query = "SELECT * FROM `${b_column}`
+        $query = "SELECT * FROM `${b_table}`
             RIGHT JOIN `$table` 
-            ON `${b_column}`.`${column}` = `${table}`.`id` 
-            WHERE `${b_column}`.`recipes_id` = :id";
+            ON `${b_table}`.`${column}` = `${table}`.`id` 
+            WHERE `${b_table}`.`recipes_id` = :id";
 
         $statement = $this->pdo->prepare($query);
 
