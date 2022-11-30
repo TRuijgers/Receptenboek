@@ -4,9 +4,9 @@ require_once('./recipebook/connect.php');
 
 $mapper = Connection::connectToDB();
 $recipe = $mapper->fetchRecipe(1);
-$ingredients = $mapper->fetchData(1, 'ingredients');
-$preparation = $mapper->fetchData(1, 'preparation');
-$images = $mapper->fetchData(1, 'images');
+$ingredients = $mapper->fetchJoinedData(1, 'ingredients');
+$preparation = $mapper->fetchJoinedData(1, 'preparation');
+$images = $mapper->fetchJoinedData(1, 'images');
 
 ?>
 <!DOCTYPE html>
@@ -38,16 +38,15 @@ $images = $mapper->fetchData(1, 'images');
     <main>
         <section id="section1">
             <div>
-                <?php 
-                    $img1 = $images[0]['path'];
-                    $title = $recipe[0]['title'];
-                    echo "
-                    <div style=\"background-image: url($img1)\">
-                        <h2>
-                            $title
-                        </h2>
-                    </div>"
-                ?>
+                <div>
+                    <?php 
+                        $img1 = $images[0]['path'];
+                        $title = $recipe[0]['title'];
+                        echo 
+                        "<img src=\"$img1\" alt=\"\">
+                        <h2>$title</h2>"
+                    ?>
+                </div>
                 <span class="section-separator"></span>
             </div>
         </section>
