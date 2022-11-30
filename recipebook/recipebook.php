@@ -25,13 +25,11 @@ class Recipebook {
             RIGHT JOIN `$table` 
             ON `${b_table}`.`${column}` = `${table}`.`id` 
             WHERE `${b_table}`.`recipes_id` = :id";
-
         $statement = $this->pdo->prepare($query);
 
         $statement->execute(array(
             ':id' => $id
         ));
-
         return $statement->fetchAll();
 
     }

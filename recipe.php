@@ -1,12 +1,13 @@
 <?php declare(strict_types=1);
 require_once('./recipebook/recipebook.php');
 require_once('./recipebook/connect.php');
+require_once('./recipebook/content.php');
 
+// $recipe = $mapper->fetchRecipe(1);
+// $ingredients = $mapper->fetchJoinedData(1, 'ingredients');
+// $preparation = $mapper->fetchJoinedData(1, 'preparation');
+// $images = $mapper->fetchJoinedData(1, 'images');
 $mapper = Connection::connectToDB();
-$recipe = $mapper->fetchRecipe(1);
-$ingredients = $mapper->fetchJoinedData(1, 'ingredients');
-$preparation = $mapper->fetchJoinedData(1, 'preparation');
-$images = $mapper->fetchJoinedData(1, 'images');
 
 ?>
 <!DOCTYPE html>
@@ -40,11 +41,13 @@ $images = $mapper->fetchJoinedData(1, 'images');
             <div>
                 <div>
                     <?php 
-                        $img1 = $images[0]['path'];
-                        $title = $recipe[0]['title'];
-                        echo 
-                        "<img src=\"$img1\" alt=\"\">
-                        <h2>$title</h2>"
+                        // $img1 = $images[0]['path'];
+                        // $title = $recipe[0]['title'];
+                        // echo 
+                        // "<img src=\"$img1\" alt=\"\">
+                        // <h2>$title</h2>"
+                        Content::printImages(1, 1, $mapper);
+                        Content::printRecipe(1, $mapper);
                     ?>
                 </div>
                 <span class="section-separator"></span>
@@ -54,16 +57,18 @@ $images = $mapper->fetchJoinedData(1, 'images');
             <div>
                 <div>
                     <?php 
-                        $img2 = $images[1]['path'];
-                        echo "<img src=\"$img2\" alt=\"\">"
+                        // $img2 = $images[1]['path'];
+                        // echo "<img src=\"$img2\" alt=\"\">"
+                        Content::printImages(1, 2, $mapper);
                     ?>
                     <div>
                         <h3>Benodigdheden:</h3>
                         <ul>
                             <?php 
-                                foreach ($ingredients as $key=>$value){
-                                    echo "<li>${value['name']}</li><span class='li-separator'></span>";
-                                }
+                                Content::printIngredients(1, $mapper);
+                                // foreach ($ingredients as $key=>$value){
+                                //     echo "<li>${value['name']}</li><span class='li-separator'></span>";
+                                // }
                             ?>
                         </ul>
                     </div>
@@ -77,9 +82,10 @@ $images = $mapper->fetchJoinedData(1, 'images');
                     <h3>Bereidingswijze:</h3>
                     <ol>
                     <?php 
-                        foreach ($preparation as $key=>$value){
-                            echo "<li>${value['description']}</li><span class='li-separator'></span>";
-                        }
+                        Content::printPreparationSteps(1, $mapper);
+                        // foreach ($preparation as $key=>$value){
+                        //     echo "<li>${value['description']}</li><span class='li-separator'></span>";
+                        // }
                     ?>
                     </ol>
                 </div>
