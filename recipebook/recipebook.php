@@ -16,20 +16,29 @@ class Recipebook {
             ':id' => $id
         ));
  
+        return $statement->fetch();
+    }
+    public function fetchAllRecipes() : array{
+        $query = "SELECT * FROM `recipes` LIMIT 6";
+
+        $statement = $this->pdo->prepare($query);
+
+        $statement->execute();
+ 
         return $statement->fetchAll();
     }
-    public function fetchData(int $id, string $table) : array{
-        if ($table == 'preparation' ||$table == 'images'){
-            $query = "SELECT * FROM `${table}` WHERE `recipes_id` = :id ORDER BY `${table}`.`sequence` ASC";
-        } else {
-            $query = "SELECT * FROM `${table}` WHERE `recipes_id` = :id";
-        }
+    public function fetchJoinedData(int $id, string $table) : array{
+        $bridge_table = 'recipes_' . $table;
+        $column = $table . '_id';
+        $query = "SELECT * FROM `${bridge_table}`
+            RIGHT JOIN `$table` 
+            ON `${bridge_table}`.`${column}` = `${table}`.`id` 
+            WHERE `${bridge_table}`.`recipes_id` = :id";
         $statement = $this->pdo->prepare($query);
 
         $statement->execute(array(
             ':id' => $id
         ));
-
         return $statement->fetchAll();
     }
 }
