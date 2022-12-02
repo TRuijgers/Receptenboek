@@ -3,10 +3,13 @@ require_once('./recipebook/recipebook.php');
 require_once('./recipebook/connect.php');
 
 $mapper = Connection::connectToDB();
-$recipe = $mapper->fetchRecipe(1);
-$ingredients = $mapper->fetchJoinedData(1, 'ingredients');
-$preparation = $mapper->fetchJoinedData(1, 'preparation');
-$images = $mapper->fetchJoinedData(1, 'images');
+
+$id = (int)$_GET['id'];
+$recipe = $mapper->fetchRecipe($id);
+$ingredients = $mapper->fetchJoinedData($id, 'ingredients');
+$preparation = $mapper->fetchJoinedData($id, 'preparation');
+$images = $mapper->fetchJoinedData($id, 'images');
+
 
 ?>
 <!DOCTYPE html>
@@ -38,6 +41,7 @@ $images = $mapper->fetchJoinedData(1, 'images');
     <main>
         <section id="section1">
             <div>
+
                 <div>
                     <?php 
                         $img1 = $images[0]['path'];

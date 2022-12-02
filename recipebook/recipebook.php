@@ -16,22 +16,31 @@ class Recipebook {
             ':id' => $id
         ));
  
+        return $statement->fetch();
+    }
+    public function fetchAllRecipes() : array{
+        $query = "SELECT * FROM `recipes` LIMIT 6";
+
+        $statement = $this->pdo->prepare($query);
+
+        $statement->execute();
+ 
         return $statement->fetchAll();
     }
     public function fetchJoinedData(int $id, string $table) : array{
-        $b_table = 'recipes_' . $table;
+
+        $bridge_table = 'recipes_' . $table;
         $column = $table . '_id';
-        $query = "SELECT * FROM `${b_table}`
+        $query = "SELECT * FROM `${bridge_table}`
             RIGHT JOIN `$table` 
-            ON `${b_table}`.`${column}` = `${table}`.`id` 
-            WHERE `${b_table}`.`recipes_id` = :id";
+            ON `${bridge_table}`.`${column}` = `${table}`.`id` 
+            WHERE `${bridge_table}`.`recipes_id` = :id";
 
         $statement = $this->pdo->prepare($query);
 
         $statement->execute(array(
             ':id' => $id
         ));
-
         return $statement->fetchAll();
 
     }

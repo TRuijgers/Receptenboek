@@ -1,5 +1,10 @@
 <?php
 require_once('./recipebook/recipebook.php');
+require_once('./recipebook/connect.php');
+require_once('./homepage/homepage.php');
+
+$mapper = Connection::connectToDB();
+$recipesArray = $mapper->fetchAllRecipes();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,33 +41,49 @@ require_once('./recipebook/recipebook.php');
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ipsa. Delectus sint placeat optio quidem dolore error sapiente similique consectetur illo, qui quibusdam corrupti veniam architecto amet blanditiis totam alias, provident reprehenderit, ab quod eum. Autem, facere! Maxime, voluptatum voluptate voluptatem qui blanditiis aperiam fuga assumenda. Ea commodi quaerat, architecto ducimus maiores error quibusdam deleniti nihil dolorem consequatur reiciendis, laborum exercitationem est animi? Voluptates molestias officiis atque quisquam natus veniam suscipit? Ducimus iusto laborum totam.</p>
         </div>
         <ul>
-            <li>
-                <div class="recipe chicken">
-                    <h3>General Tso's Chicken</h3>
-                </div>
-                <div>
-                    <h2>Placeholder recipe</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
-                </div>
-            </li>
-            <li>
-                <div class="recipe fish">
-                    <h3>Fish</h3>
-                </div>
-                <div>
-                    <h2>Placeholder recipe</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
-                </div>
-            </li>
-            <li>
-                <div class="recipe rice">
-                    <h3>Rijst</h3>
-                </div>
-                <div>
-                    <h2>Placeholder recipe</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
-                </div>
-            </li>
+            <form action="" method="post">
+                <?php 
+                foreach ($recipesArray as $key=>$value){
+                    echo "<li><button 
+                    formaction='recipe.php?id=${value['id']}' 
+                    type='submit' name=\"${value['id']}\" id=\"${value['id']}\">
+                    </button></li>";
+                }
+                    // <li>
+                    //     <a href="http://localhost/dashboard/receptenboek/recipe.php?=1">
+                    //         <div class="chicken">
+                    //             <h3>General Tso's Chicken</h3>
+                    //         </div>
+                    //     </a>
+                    //     <div>
+                    //         <h2>Placeholder recipe</h2>
+                    //         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
+                    //     </div>
+                    // </li>
+                    // <li>
+                    //     <a href="http://localhost/dashboard/receptenboek/recipe.php">
+                    //         <div class="fish">
+                    //             <h3>Fish</h3>
+                    //         </div>
+                    //     </a>
+                    //     <div>
+                    //         <h2>Placeholder recipe</h2>
+                    //         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
+                    //     </div>
+                    // </li>
+                    // <li>
+                    //     <a href="http://localhost/dashboard/receptenboek/recipe.php">
+                    //         <div class="rice">
+                    //             <h3>Rijst</h3>
+                    //         </div>
+                    //     </a>
+                    //     <div>
+                    //         <h2>Placeholder recipe</h2>
+                    //         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
+                    //     </div>
+                    // </li>
+                ?>
+            </form>
         </ul>
     </main>
     <footer>
@@ -71,7 +92,9 @@ require_once('./recipebook/recipebook.php');
             <div>Contact</div>
         </div>
     </footer>
-
+    <?php 
+    // getButtonPressed(); 
+    ?>
 </body>
 
 </html>
