@@ -45,7 +45,7 @@ $images = $mapper->fetchJoinedData($id, 'images');
                 <div>
                     <?php 
                         $img1 = $images[0]['path'];
-                        $title = $recipe[0]['title'];
+                        $title = $recipe['title'];
                         echo 
                         "<img src=\"$img1\" alt=\"\">
                         <h2>$title</h2>"
