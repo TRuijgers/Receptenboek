@@ -4,7 +4,7 @@ require_once('./recipebook/recipebook.php');
 class Content {
     public static function printRecipe($id, $map){
         $data = $map->fetchRecipe($id);
-        $title = $data[0]['title'];
+        $title = $data['title'];
 
         echo "<h2>${title}</h2>";
     }

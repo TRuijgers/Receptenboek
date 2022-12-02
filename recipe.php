@@ -3,10 +3,6 @@ require_once('./recipebook/recipebook.php');
 require_once('./recipebook/connect.php');
 require_once('./recipebook/content.php');
 
-// $recipe = $mapper->fetchRecipe(1);
-// $ingredients = $mapper->fetchJoinedData(1, 'ingredients');
-// $preparation = $mapper->fetchJoinedData(1, 'preparation');
-// $images = $mapper->fetchJoinedData(1, 'images');
 $mapper = Connection::connectToDB();
 $id = (int)$_GET['id'];
 
@@ -50,8 +46,8 @@ $id = (int)$_GET['id'];
                         // echo 
                         // "<img src=\"$img1\" alt=\"\">
                         // <h2>$title</h2>"
-                        Content::printImages(1, 1, $mapper);
-                        Content::printRecipe(1, $mapper);
+                        Content::printImages($id, 1, $mapper);
+                        Content::printRecipe($id, $mapper);
 
                     ?>
                 </div>
@@ -64,13 +60,13 @@ $id = (int)$_GET['id'];
                     <?php 
                         // $img2 = $images[1]['path'];
                         // echo "<img src=\"$img2\" alt=\"\">"
-                        Content::printImages(1, 2, $mapper);
+                        Content::printImages($id, 2, $mapper);
                     ?>
                     <div>
                         <h3>Benodigdheden:</h3>
                         <ul>
                             <?php 
-                                Content::printIngredients(1, $mapper);
+                                Content::printIngredients($id, $mapper);
                                 // foreach ($ingredients as $key=>$value){
                                 //     echo "<li>${value['name']}</li><span class='li-separator'></span>";
                                 // }
@@ -87,7 +83,7 @@ $id = (int)$_GET['id'];
                     <h3>Bereidingswijze:</h3>
                     <ol>
                     <?php 
-                        Content::printPreparationSteps(1, $mapper);
+                        Content::printPreparationSteps($id, $mapper);
                         // foreach ($preparation as $key=>$value){
                         //     echo "<li>${value['description']}</li><span class='li-separator'></span>";
                         // }
