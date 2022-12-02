@@ -8,6 +8,8 @@ require_once('./recipebook/content.php');
 // $preparation = $mapper->fetchJoinedData(1, 'preparation');
 // $images = $mapper->fetchJoinedData(1, 'images');
 $mapper = Connection::connectToDB();
+$id = (int)$_GET['id'];
+
 
 ?>
 <!DOCTYPE html>
@@ -39,8 +41,10 @@ $mapper = Connection::connectToDB();
     <main>
         <section id="section1">
             <div>
+
                 <div>
                     <?php 
+
                         // $img1 = $images[0]['path'];
                         // $title = $recipe[0]['title'];
                         // echo 
@@ -48,6 +52,7 @@ $mapper = Connection::connectToDB();
                         // <h2>$title</h2>"
                         Content::printImages(1, 1, $mapper);
                         Content::printRecipe(1, $mapper);
+
                     ?>
                 </div>
                 <span class="section-separator"></span>
