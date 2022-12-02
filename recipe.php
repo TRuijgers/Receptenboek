@@ -1,11 +1,8 @@
 <?php declare(strict_types=1);
-require_once('./recipebook/recipebook.php');
 require_once('./recipebook/connect.php');
 require_once('./recipebook/content.php');
 
-$mapper = Connection::connectToDB();
-$id = (int)$_GET['id'];
-
+$contentLoader = new Content(Connection::connectToDB());
 
 ?>
 <!DOCTYPE html>
@@ -27,79 +24,13 @@ $id = (int)$_GET['id'];
 
 
 <body>
-    <header>
-        <h1>Receptenboek</h1>
-        <div>
-            <div>Home</div>
-            <div>Contact</div>
-        </div>
-    </header>
+    <?php include_once('./components/header.php'); ?>
     <main>
-        <section id="section1">
-            <div>
-
-                <div>
-                    <?php 
-
-                        // $img1 = $images[0]['path'];
-                        // $title = $recipe[0]['title'];
-                        // echo 
-                        // "<img src=\"$img1\" alt=\"\">
-                        // <h2>$title</h2>"
-                        Content::printImages($id, 1, $mapper);
-                        Content::printRecipe($id, $mapper);
-
-                    ?>
-                </div>
-                <span class="section-separator"></span>
-            </div>
-        </section>
-        <section id="section2">
-            <div>
-                <div>
-                    <?php 
-                        // $img2 = $images[1]['path'];
-                        // echo "<img src=\"$img2\" alt=\"\">"
-                        Content::printImages($id, 2, $mapper);
-                    ?>
-                    <div>
-                        <h3>Benodigdheden:</h3>
-                        <ul>
-                            <?php 
-                                Content::printIngredients($id, $mapper);
-                                // foreach ($ingredients as $key=>$value){
-                                //     echo "<li>${value['name']}</li><span class='li-separator'></span>";
-                                // }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-                <span class="section-separator"></span>
-            </div>
-        </section>
-        <section id="section3">
-            <div>
-                <div>
-                    <h3>Bereidingswijze:</h3>
-                    <ol>
-                    <?php 
-                        Content::printPreparationSteps($id, $mapper);
-                        // foreach ($preparation as $key=>$value){
-                        //     echo "<li>${value['description']}</li><span class='li-separator'></span>";
-                        // }
-                    ?>
-                    </ol>
-                </div>
-                <span class="section-separator"></span>
-            </div>
-        </section>
+        <?php 
+            for ($i=1; $i<=3; $i++) include_once("./components/section_${i}.php");
+        ?>
     </main>
-    <footer>
-        <div>
-            <div>Home</div>
-            <div>Contact</div>
-        </div>
-    </footer>
+    <?php include_once('./components/footer.php'); ?>
 </body>
 
 </html>

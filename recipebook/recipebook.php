@@ -7,13 +7,13 @@ class Recipebook {
     {
         $this->pdo = $pdo;
     }
-    public function fetchRecipe(int $id) : array{
+    public function fetchRecipe() : array{
         $query = "SELECT * FROM `recipes` WHERE `id` = :id";
 
         $statement = $this->pdo->prepare($query);
 
         $statement->execute(array(
-            ':id' => $id
+            ':id' => $_GET['id']
         ));
  
         return $statement->fetch();
@@ -27,24 +27,19 @@ class Recipebook {
  
         return $statement->fetchAll();
     }
-    public function fetchJoinedData(int $id, string $table) : array{
-
+    public function fetchJoinedData(string $table) : array{
         $bridge_table = 'recipes_' . $table;
         $column = $table . '_id';
         $query = "SELECT * FROM `${bridge_table}`
             RIGHT JOIN `$table` 
-
             ON `${bridge_table}`.`${column}` = `${table}`.`id` 
             WHERE `${bridge_table}`.`recipes_id` = :id";
-
-
         $statement = $this->pdo->prepare($query);
 
         $statement->execute(array(
-            ':id' => $id
+            ':id' => $_GET['id']
         ));
         return $statement->fetchAll();
-
     }
 }
 
