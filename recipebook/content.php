@@ -11,23 +11,26 @@ class Content {
     public function printAllRecipes(){
         $data = $this->dataMap->fetchAllRecipes();
         foreach ($data as $key=>$value){
-            echo "<li><button 
-            formaction='recipe.php?id=${value['id']}' 
+            echo "<li>
+            <button formaction='recipe.php?id=${value['id']}' 
             type='submit' name=\"${value['id']}\" id=\"${value['id']}\">
-            </button></li>";
+            </button>
+            </li>";
         }
+        // TODO Provide corresponding images
     }
     public function printRecipe(){
         $data = $this->dataMap->fetchRecipe();
         $title = $data['title'];
-        ;
+
         echo "<h2>${title}</h2>";
     }
     public function printIngredients(){
         $table = 'ingredients';
         $data = $this->dataMap->fetchJoinedData($table);
         foreach ($data as $key=>$value){
-            echo "<li>${value['name']}</li><span class='li-separator'></span>";
+            echo "<li>${value['name']}</li>
+            <span class='li-separator'></span>";
         }
     }
     public function printPreparationSteps(){
@@ -35,7 +38,8 @@ class Content {
         $data = $this->dataMap->fetchJoinedData($table);
 
         foreach ($data as $key=>$value){
-            echo "<li>${value['description']}</li><span class='li-separator'></span>";
+            echo "<li>${value['description']}</li>
+            <span class='li-separator'></span>";
         }
     }
     public function printImages(int $position){
