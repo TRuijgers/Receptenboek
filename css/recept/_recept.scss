@@ -7,6 +7,8 @@ $yellow: #E0DDAA;
 $white: #EEEEEE;
 $light-gray: rgb(172, 172, 172);
 
+// TODO https://stackoverflow.com/questions/14552529/dynamic-sass-variables/14552770#comment20302176_14552770
+
 main {
     section:nth-of-type(1) {
         min-height: fit-content;
