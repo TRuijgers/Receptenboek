@@ -44,12 +44,11 @@ $recipesArray = $mapper->fetchAllRecipes();
             <form action="" method="post">
                 <?php 
                 foreach ($recipesArray as $key=>$value){
-                    // change div class=chicken to img
                     echo "<li>
                         <button formaction='recipe.php?id=${value['id']}' type='submit' name=\"${value['id']}\" id=\"${value['id']}\">
-                            <img class='chicken' src='https://www.recipetineats.com/wp-content/uploads/2020/10/General-Tsao-Chicken_1-SQ.jpg'>
+                            <img src='https://www.recipetineats.com/wp-content/uploads/2020/10/General-Tsao-Chicken_1-SQ.jpg'>
                                 <div class='centered'>
-                                    General Tso's Chicken
+                                    <h3>General Tso's Chicken</h3>
                                 </div>
                             </img>
                         </button>
