@@ -4,17 +4,20 @@ main section:nth-of-type(1) {
   min-height: fit-content;
 }
 main section:nth-of-type(1) > div {
+  padding-top: 5rem;
   min-height: auto;
 }
 main section:nth-of-type(1) > div div {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 37.3rem;
+  width: 80%;
+  border-radius: 1rem;
+}
+main section:nth-of-type(1) > div div img {
+  flex: 0 0 10rem;
+  width: 59vw;
+  border-radius: 1rem;
 }
 main section:nth-of-type(1) > div div h2 {
   color: #EEEEEE;

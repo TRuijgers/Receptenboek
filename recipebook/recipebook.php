@@ -28,18 +28,21 @@ class Recipebook {
         return $statement->fetchAll();
     }
     public function fetchJoinedData(int $id, string $table) : array{
+
         $bridge_table = 'recipes_' . $table;
         $column = $table . '_id';
         $query = "SELECT * FROM `${bridge_table}`
             RIGHT JOIN `$table` 
             ON `${bridge_table}`.`${column}` = `${table}`.`id` 
             WHERE `${bridge_table}`.`recipes_id` = :id";
+
         $statement = $this->pdo->prepare($query);
 
         $statement->execute(array(
             ':id' => $id
         ));
         return $statement->fetchAll();
+
     }
 }
 
