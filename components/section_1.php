@@ -4,7 +4,7 @@
             <div>
                 <?php 
                    $contentLoader->printImages(1);
-                   $contentLoader->printRecipe();
+                   $contentLoader->printRecipeData('title');
                 ?>
             </div>
             <span class="section-separator"></span>

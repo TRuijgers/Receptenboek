@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-require_once('./recipebook/recipebook.php');
+require_once('./classes/recipebook.php');
 
 class Connection {
     public static function connectToDB(){  
@@ -8,5 +8,8 @@ class Connection {
         $pdo = new PDO('mysql:host=localhost;dbname=recipebook', $username, $password);
 
         return new Recipebook($pdo);
+    }
+    public static function disconnectFromDB($pdo){
+        $pdo = null;
     }
 }

@@ -5,7 +5,7 @@
                 <h3>Bereidingswijze:</h3>
                 <ol>
                 <?php 
-                    $contentLoader->printPreparationSteps();
+                    $contentLoader->printOrderedList('preparation');
                 ?>
                 </ol>
             </div>

@@ -9,7 +9,7 @@
                     <h3>Benodigdheden:</h3>
                     <ul>
                         <?php 
-                            $contentLoader->printIngredients();
+                            $contentLoader->printUnorderedList('ingredients');
                         ?>
                     </ul>
                 </div>

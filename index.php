@@ -1,10 +1,10 @@
 <?php
-require_once('./recipebook/recipebook.php');
-require_once('./recipebook/connect.php');
+require_once('./classes/content.php');
+require_once('./classes/connect.php');
 require_once('./homepage/homepage.php');
 
-$mapper = Connection::connectToDB();
-$recipesArray = $mapper->fetchAllRecipes();
+$contentLoader = new Content(Connection::connectToDB());
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,13 +23,7 @@ $recipesArray = $mapper->fetchAllRecipes();
     <script src="./scripts/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Recepten</h1>
-        <div>
-            <div>Home</div>
-            <div>Contact</div>
-        </div>
-    </header>
+    <?php include_once('./components/header.php'); ?>
     <main>
         <div>
             <div>
@@ -43,29 +37,14 @@ $recipesArray = $mapper->fetchAllRecipes();
         <ul>
             <form action="" method="post">
                 <?php 
-                foreach ($recipesArray as $key=>$value){
-                    echo "<li>
-                        <button formaction='recipe.php?id=${value['id']}' type='submit' name=\"${value['id']}\" id=\"${value['id']}\">
-                            <img src='https://www.recipetineats.com/wp-content/uploads/2020/10/General-Tsao-Chicken_1-SQ.jpg'>
-                                <div class='centered'>
-                                    <h3>General Tso's Chicken</h3>
-                                </div>
-                            </img>
-                        </button>
-                    </li>";
-                }
+                    $contentLoader->printAllRecipes();
                 ?>
             </form>
         </ul>
     </main>
-    <footer>
-        <div>
-            <div>Home</div>
-            <div>Contact</div>
-        </div>
-    </footer>
-    <?php 
-    ?>
+    <?php include_once('./components/footer.php'); ?>
 </body>
 
 </html>
+
+<?php Connection::disconnectFromDB($contentLoader); ?>

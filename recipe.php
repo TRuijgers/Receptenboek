@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
-require_once('./recipebook/connect.php');
-require_once('./recipebook/content.php');
+require_once('./classes/connect.php');
+require_once('./classes/content.php');
 
 $contentLoader = new Content(Connection::connectToDB());
 
@@ -34,3 +34,5 @@ $contentLoader = new Content(Connection::connectToDB());
 </body>
 
 </html>
+
+<?php Connection::disconnectFromDB($contentLoader); ?>
