@@ -44,44 +44,17 @@ $recipesArray = $mapper->fetchAllRecipes();
             <form action="" method="post">
                 <?php 
                 foreach ($recipesArray as $key=>$value){
-                    echo "<li><button 
-                    formaction='recipe.php?id=${value['id']}' 
-                    type='submit' name=\"${value['id']}\" id=\"${value['id']}\">
-                    </button></li>";
+                    // change div class=chicken to img
+                    echo "<li>
+                        <button formaction='recipe.php?id=${value['id']}' type='submit' name=\"${value['id']}\" id=\"${value['id']}\">
+                            <img class='chicken' src='https://www.recipetineats.com/wp-content/uploads/2020/10/General-Tsao-Chicken_1-SQ.jpg'>
+                                <div class='centered'>
+                                    General Tso's Chicken
+                                </div>
+                            </img>
+                        </button>
+                    </li>";
                 }
-                    // <li>
-                    //     <a href="http://localhost/dashboard/receptenboek/recipe.php?=1">
-                    //         <div class="chicken">
-                    //             <h3>General Tso's Chicken</h3>
-                    //         </div>
-                    //     </a>
-                    //     <div>
-                    //         <h2>Placeholder recipe</h2>
-                    //         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
-                    //     </div>
-                    // </li>
-                    // <li>
-                    //     <a href="http://localhost/dashboard/receptenboek/recipe.php">
-                    //         <div class="fish">
-                    //             <h3>Fish</h3>
-                    //         </div>
-                    //     </a>
-                    //     <div>
-                    //         <h2>Placeholder recipe</h2>
-                    //         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
-                    //     </div>
-                    // </li>
-                    // <li>
-                    //     <a href="http://localhost/dashboard/receptenboek/recipe.php">
-                    //         <div class="rice">
-                    //             <h3>Rijst</h3>
-                    //         </div>
-                    //     </a>
-                    //     <div>
-                    //         <h2>Placeholder recipe</h2>
-                    //         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci natus quibusdam, aut quis harum. Dolores unde quidem consequuntur voluptatibus.</p>
-                    //     </div>
-                    // </li>
                 ?>
             </form>
         </ul>
@@ -93,7 +66,6 @@ $recipesArray = $mapper->fetchAllRecipes();
         </div>
     </footer>
     <?php 
-    // getButtonPressed(); 
     ?>
 </body>
 
