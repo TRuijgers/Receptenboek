@@ -33,8 +33,10 @@ class Recipebook {
         $column = $table . '_id';
         $query = "SELECT * FROM `${bridge_table}`
             RIGHT JOIN `$table` 
+
             ON `${bridge_table}`.`${column}` = `${table}`.`id` 
             WHERE `${bridge_table}`.`recipes_id` = :id";
+
 
         $statement = $this->pdo->prepare($query);
 

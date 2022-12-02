@@ -1,27 +1,33 @@
 <?php declare(strict_types=1);
 require_once('./recipebook/recipebook.php');
 
-class LoadContent {
-    public function printRecipe(){
-        fetchJoinedData($id, $table);
+class Content {
+    public static function printRecipe($id, $map){
+        $data = $map->fetchRecipe($id);
+        $title = $data[0]['title'];
 
+        echo "<h2>${title}</h2>";
     }
-    public function printIngredients($id){
-
-        Recipebook::fetchJoinedData($id, $table);
-        foreach ($ingredients as $key=>$value){
+    public static function printIngredients($id, $map){
+        $table = 'ingredients';
+        $data = $map->fetchJoinedData($id, $table);
+        foreach ($data as $key=>$value){
             echo "<li>${value['name']}</li><span class='li-separator'></span>";
         }
     }
-    public function printPreparationSteps($id){
+    public static function printPreparationSteps($id, $map){
         $table = 'preparation';
-        Recipebook::fetchJoinedData($id, $table);
+        $data = $map->fetchJoinedData($id, $table);
 
-        foreach ($preparation as $key=>$value){
+        foreach ($data as $key=>$value){
             echo "<li>${value['description']}</li><span class='li-separator'></span>";
         }
     }
-    public function printImagePaths($id, $position){
-        Recipebook::fetchJoinedData($id, $table);
+    public static function printImages($id, $position, $map){
+        $table = 'images';
+        $data = $map->fetchJoinedData($id, $table);
+
+        $img = $data[$position-1]['path'];
+        echo "<img src=\"$img\" alt=\"\">";
     }
 }
