@@ -1,15 +1,39 @@
 $black: #141E27;
 $blue: #203239;
-$red: rgb(112, 31, 29);
-$bright-red: rgb(154, 4, 2);
-$brown: #9f9466;
-$yellow: #E0DDAA;
 $white: #EEEEEE;
 $light-gray: rgb(172, 172, 172);
 
 // TODO https://stackoverflow.com/questions/14552529/dynamic-sass-variables/14552770#comment20302176_14552770
 
+body {
+    &.blue {
+        $color1:  #94BCEB;
+        $color2:  #3E87DA;
+        $color3: #1D5596;
+        $color4: #0C2543;
+
+        @import "theme";
+    }
+    &.red {
+        $color1:  #F58F96;
+        $color2:  #EC323F;
+        $color3: #A8101A;
+        $color4: #380A0D;
+
+        @import "theme";
+    }
+    &.orange {
+        $color1:  #FED1AE;
+        $color2:  #FD9648;
+        $color3: #DE6202;
+        $color4: #41230B;
+
+        @import "theme";
+    }
+}
+
 main {
+    font-family: 'Cormorant Garamond', serif;
     section:nth-of-type(1) {
         min-height: fit-content;
         > div {
@@ -32,7 +56,6 @@ main {
                     margin-left: auto;
                     margin-right: auto;
                     text-align: center;
-                    font-family: 'Cormorant', serif;
                     font-size: 3.2rem;
                     width: 100%;
                     text-shadow: 1px 1px $black;
@@ -70,10 +93,18 @@ main {
                     align-items: center;
                     justify-content: center;
                     ul {
-                        font-family: 'Cormorant', serif;
                         font-size: 1.2rem;
                         font-style: italic;
+                        font-weight: 500;
                         align-self: center;
+                        h4 {
+                            font-style: normal;
+                        }
+                        li {
+                            span:first-of-type {
+                                font-weight: bold;
+                            }
+                        }
                     }
                 }
             }
@@ -96,6 +127,7 @@ main {
                 margin-right: auto;
                 ol {
                     padding-bottom: 1.5rem;
+                    font-weight: 500;
                     li {
                         font-size: 1.2rem;
                         font-style: italic;
@@ -106,7 +138,6 @@ main {
         }
     }
     section {
-        background-color: $red;
         display: flex;
         > div {
             background-color: $white;
@@ -126,13 +157,12 @@ main {
         flex: 0 0 4rem;
         display: block;
         height: 0.8rem;
-        background-color: $bright-red;
         margin: 5rem 30rem;
     }
     .li-separator {
         display: block;
-        border: 0.5px solid black;
         border-radius: 50%;
         margin-bottom: 0.2rem;
     }
 }
+

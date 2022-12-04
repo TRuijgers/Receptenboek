@@ -4,9 +4,9 @@
             <div>
                 <h3>Bereidingswijze:</h3>
                 <ol>
-                <?php 
-                    $contentLoader->printOrderedList('preparation');
-                ?>
+                    <?php 
+                        $contentDistributor->printPreparationList('preparation');
+                    ?>
                 </ol>
             </div>
             <span class="section-separator"></span>

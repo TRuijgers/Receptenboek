@@ -1,5 +1,6 @@
 <?php declare(strict_types=1);
-require_once('./classes/recipebook.php');
+require_once('./classes/collect.php');
+require_once('./classes/page_content.php');
 
 class Content {
     private $dataMap;
@@ -8,71 +9,23 @@ class Content {
     {
         $this->dataMap = $dataMap;
     }
-    public function printAllRecipes(){
+    public function feedHomePage(){
         $recipe_data = $this->dataMap->fetchData('recipes', 'ORDER BY id ASC');
-        $image_data = $this->sortImages();
-        foreach ($recipe_data as $key=>$value){
-            echo 
-                "<li>
-                    <button formaction='recipe.php?id=${value['id']}' type='submit' name=\"${value['id']}\" id=\"${value['id']}\">
-                        <img src=\"${image_data[$key]}\">
-                            <div class='centered'>
-                                <h3>${value['title']}</h3>
-                            </div>
-                        </img>
-                    </button>
-                </li>";
-            }
-        // TODO Provide corresponding images
-    }
-    public function printRecipeData(string $column){
-        $data = $this->dataMap->fetchRecipe();
-        $content = $data[$column];
+        $image_data = array_merge(...($this->dataMap->fetchImages()));
+        $data_bundle = new PageContent($recipe_data, $image_data);
 
-        echo "<h2>${content}</h2>";
+        return $data_bundle;
     }
-    // public function printIngredients(){
-    //     $table = 'ingredients';
-    //     $data = $this->dataMap->fetchJoinedData($table);
-    //     foreach ($data as $key=>$value){
-    //         echo "<li>${value['name']}</li>
-    //         <span class='li-separator'></span>";
-    //     }
-    // }
-    public function printUnorderedList(string $table){
-        // Use for ingredients, tools and serving tips
-        $data = $this->dataMap->fetchJoinedData($table);
+    public function feedRecipePage(){
+        $recipe_data = $this->dataMap->fetchRecipe();
+        $image_data = $this->dataMap->fetchJoinedData('images', 'ORDER BY recipes_images.sequence ASC');
+        $ingredient_data = $this->dataMap->fetchJoinedData('ingredients', 'ORDER BY recipes_ingredients.segment ASC');
+        $preparation_data = $this->dataMap->fetchJoinedData('preparation', 'ORDER BY recipes_preparation.sequence ASC');
+        $tool_data = $this->dataMap->fetchJoinedData('tools');
+        // $serving_tip_data = $this->dataMap->fetchData('serving_tips', 'ORDER BY recipes_serving_tips.sequence ASC');
 
-        foreach ($data as $key=>$value){
-            echo "<li>${value['name']}</li>
-            <span class='li-separator'></span>";
-        }
-    }
-    public function printOrderedList($table){
-        // Use for preparation steps and serving tips
-        $data = $this->dataMap->fetchJoinedData($table, 'ORDER BY recipes_preparation.sequence ASC');
+        $data_bundle = new PageContent($recipe_data, $image_data, $ingredient_data, $preparation_data, $tool_data);
 
-        foreach ($data as $key=>$value){
-            echo "<li>${value['description']}</li>
-            <span class='li-separator'></span>";
-        }
-    }
-    public function printImages(int $position){
-        $table = 'images';
-        $data = $this->dataMap->fetchJoinedData($table);
-
-        $img = $data[$position-1]['path'];
-        echo "<img src=\"$img\" alt=\"\">";
-    }
-    public function sortImages(){
-        $images = array();
-        $image_data = $this->dataMap->fetchData('images');
-        $bridge_data = $this->dataMap->fetchColumn('images_id', 'recipes_images', 'WHERE sequence = 1');
-        foreach ($image_data as $key=>$value_a){
-            foreach ($bridge_data as $key=>$value_b){
-                if ($value_b['images_id'] == $value_a['id']) array_push($images, $value_a['path']);
-            }
-        }
-        return $images;
+        return $data_bundle;
     }
 }

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-class Recipebook {
+class Collect {
     private $pdo;
 
     public function __construct($pdo)
@@ -18,26 +18,22 @@ class Recipebook {
  
         return $statement->fetch();
     }
-    public function fetchOrderedRecipes(string $order = 'id', int $limit = 24) : array{
-        $query = "SELECT * FROM `recipes` ORDER BY `${order}` LIMIT `${limit}`";
+    public function fetchImages() : array{
+        $query = "SELECT images.path FROM images 
+            WHERE images.id 
+            IN (SELECT images_id 
+                FROM recipes_images 
+                WHERE sequence = 1 
+                ORDER BY recipes_images.recipes_id ASC)";
 
         $statement = $this->pdo->prepare($query);
 
         $statement->execute();
- 
+    
         return $statement->fetchAll();
     }
     public function fetchData(string $table, string $condition = '') : array {
         $query = "SELECT * FROM `${table}` ${condition}";
-
-        $statement = $this->pdo->prepare($query);
-
-        $statement->execute();
- 
-        return $statement->fetchAll();
-    }
-    public function fetchColumn(string $column, string $table, string $condition = '') : array {
-        $query = "SELECT `${column}` FROM `${table}` ${condition}";
 
         $statement = $this->pdo->prepare($query);
 
@@ -61,4 +57,3 @@ class Recipebook {
         return $statement->fetchAll();
     }
 }
-

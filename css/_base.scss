@@ -26,6 +26,10 @@ header {
             font-size: 20px;
             color: $white;
             margin: 1rem;
+            .nav-link {
+                text-decoration: none;
+                color: $white;
+            }
         }
     }
 }
@@ -41,5 +45,9 @@ footer {
         justify-content: space-evenly;
         align-items: center;
         width: 15%;
+        .nav-link {
+            text-decoration: none;
+            color: $white;
+        }
     }
 }

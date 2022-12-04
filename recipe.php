@@ -1,8 +1,10 @@
 <?php declare(strict_types=1);
 require_once('./classes/connect.php');
 require_once('./classes/content.php');
+require_once('./classes/page_content.php');
 
-$contentLoader = new Content(Connection::connectToDB());
+$contentLoader = new Content(Connect::connectToDB());
+$contentDistributor = $contentLoader->feedRecipePage();
 
 ?>
 <!DOCTYPE html>
@@ -15,15 +17,15 @@ $contentLoader = new Content(Connection::connectToDB());
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,300&display=swap" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
     <link href="./css/recept/styles.css" rel="stylesheet">
     
     <script src="./scripts/main.js" defer></script>
 </head>
 
 
-<body>
+<body class=<?php $contentDistributor->printRecipeContent('theme') ?>>
     <?php include_once('./components/header.php'); ?>
     <main>
         <?php 
@@ -35,4 +37,4 @@ $contentLoader = new Content(Connection::connectToDB());
 
 </html>
 
-<?php Connection::disconnectFromDB($contentLoader); ?>
+<?php Connect::disconnectFromDB($contentLoader); ?>

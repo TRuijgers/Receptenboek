@@ -2,10 +2,8 @@
     <section id="section1">
         <div>
             <div>
-                <?php 
-                   $contentLoader->printImages(1);
-                   $contentLoader->printRecipeData('title');
-                ?>
+                <?php $contentDistributor->printImage(1); ?>
+                <h2><?php $contentDistributor->printRecipeContent('title'); ?></h2>
             </div>
             <span class="section-separator"></span>
         </div>

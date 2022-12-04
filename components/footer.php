@@ -1,7 +1,9 @@
 <?php ?>
     <footer>
         <div>
-            <div>Home</div>
+            <div>
+                <a href="index.php" class="nav-link">Home</a>
+            </div>
             <div>Contact</div>
         </div>
     </footer>

@@ -1,9 +1,11 @@
 <?php
-require_once('./classes/content.php');
 require_once('./classes/connect.php');
+require_once('./classes/content.php');
+require_once('./classes/page_content.php');
 require_once('./homepage/homepage.php');
 
-$contentLoader = new Content(Connection::connectToDB());
+$contentLoader = new Content(Connect::connectToDB());
+$contentDistributor = $contentLoader->feedHomePage();
 
 ?>
 <!DOCTYPE html>
@@ -16,9 +18,10 @@ $contentLoader = new Content(Connection::connectToDB());
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
-    <link href="./css/home/styles.css" rel="stylesheet">
+
+    <link href="./css/home/styles.css" rel="stylesheet" defer>
     
     <script src="./scripts/main.js" defer></script>
 </head>
@@ -37,7 +40,7 @@ $contentLoader = new Content(Connection::connectToDB());
         <ul>
             <form action="" method="post">
                 <?php 
-                    $contentLoader->printAllRecipes();
+                    $contentDistributor->printAllRecipes(); 
                 ?>
             </form>
         </ul>
@@ -47,4 +50,4 @@ $contentLoader = new Content(Connection::connectToDB());
 
 </html>
 
-<?php Connection::disconnectFromDB($contentLoader); ?>
+<?php Connect::disconnectFromDB($contentLoader); ?>

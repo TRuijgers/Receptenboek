@@ -3,13 +3,13 @@
         <div>
             <div>
                 <?php 
-                    $contentLoader->printImages(2);
+                    $contentDistributor->printImage(2);
                 ?>
                 <div>
                     <h3>Benodigdheden:</h3>
                     <ul>
                         <?php 
-                            $contentLoader->printUnorderedList('ingredients');
+                            $contentDistributor->printIngredientsList('ingredients');
                         ?>
                     </ul>
                 </div>

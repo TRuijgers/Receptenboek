@@ -1,3 +1,34 @@
+body.blue section {
+  background-color: #0C2543;
+}
+body.blue .section-separator {
+  background-color: #1D5596;
+}
+body.blue .li-separator {
+  border: 0.5px solid #3E87DA;
+}
+body.red section {
+  background-color: #380A0D;
+}
+body.red .section-separator {
+  background-color: #A8101A;
+}
+body.red .li-separator {
+  border: 0.5px solid #EC323F;
+}
+body.orange section {
+  background-color: #41230B;
+}
+body.orange .section-separator {
+  background-color: #DE6202;
+}
+body.orange .li-separator {
+  border: 0.5px solid #FD9648;
+}
+
+main {
+  font-family: "Cormorant Garamond", serif;
+}
 main section:nth-of-type(1) {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
@@ -25,7 +56,6 @@ main section:nth-of-type(1) > div div h2 {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-family: "Cormorant", serif;
   font-size: 3.2rem;
   width: 100%;
   text-shadow: 1px 1px #141E27;
@@ -64,10 +94,16 @@ main section:nth-of-type(2) > div > div div {
   justify-content: center;
 }
 main section:nth-of-type(2) > div > div div ul {
-  font-family: "Cormorant", serif;
   font-size: 1.2rem;
   font-style: italic;
+  font-weight: 500;
   align-self: center;
+}
+main section:nth-of-type(2) > div > div div ul h4 {
+  font-style: normal;
+}
+main section:nth-of-type(2) > div > div div ul li span:first-of-type {
+  font-weight: bold;
 }
 main section:nth-of-type(3) > div > div {
   align-self: center;
@@ -85,6 +121,7 @@ main section:nth-of-type(3) > div > div {
 }
 main section:nth-of-type(3) > div > div ol {
   padding-bottom: 1.5rem;
+  font-weight: 500;
 }
 main section:nth-of-type(3) > div > div ol li {
   font-size: 1.2rem;
@@ -92,7 +129,6 @@ main section:nth-of-type(3) > div > div ol li {
   padding-top: 0.1rem;
 }
 main section {
-  background-color: rgb(112, 31, 29);
   display: flex;
 }
 main section > div {
@@ -112,12 +148,10 @@ main .section-separator {
   flex: 0 0 4rem;
   display: block;
   height: 0.8rem;
-  background-color: rgb(154, 4, 2);
   margin: 5rem 30rem;
 }
 main .li-separator {
   display: block;
-  border: 0.5px solid black;
   border-radius: 50%;
   margin-bottom: 0.2rem;
 }
@@ -148,6 +182,10 @@ header > div div {
   color: #EEEEEE;
   margin: 1rem;
 }
+header > div div .nav-link {
+  text-decoration: none;
+  color: #EEEEEE;
+}
 
 footer {
   background-color: #203239;
@@ -162,6 +200,10 @@ footer > div {
   justify-content: space-evenly;
   align-items: center;
   width: 15%;
+}
+footer > div .nav-link {
+  text-decoration: none;
+  color: #EEEEEE;
 }
 
 *, *::before, *::after {
