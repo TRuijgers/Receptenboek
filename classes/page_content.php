@@ -47,7 +47,7 @@ class PageContent {
                 echo "<h4>${segment}</h4>";
             }
             foreach ($data[$key_a] as $key_b=>$value_b){
-                $quantity = $this->checkQuantity($value_b);
+                $quantity = $this->checkIngredientQuantity($value_b);
                 echo "<li><span>${quantity}</span>${value_b['name']}</li><span class='li-separator'></span>";
             }
         }
@@ -79,32 +79,26 @@ class PageContent {
         $data = $this->serving_tips;
 
         $item = $data[$position-1]['description'];
-        echo "<img src=\"$item\" alt=\"\">";
+        echo $item;
     }
-    public function checkQuantity(array $ingredient){
-        $quantity = "";
+    public function checkIngredientQuantity(array $ingredient){
         if (isset($ingredient['quantity'])) {
             $quantity = $ingredient['quantity'] . "\n";
-        } else {
-            return $quantity;
-        }
+        } else { return ""; }
         if (isset($ingredient['unit'])) $quantity .= $ingredient['unit'] . "\n";
         return $quantity;
     }
     public function sortIngredients(array $data){
         $sorted_data = array(array());
-        $count = 0; 
+        $count = 0;
         for ($i = 0; $i < count($data); $i++){
-            if (isset($data[$i+1]['segment'])) {
-                if (!($data[$i]['segment'] == $data[$i+1]['segment'])) {
+            if (isset($data[$i-1]['segment'])) {
+                if (!($data[$i]['segment'] == $sorted_data[$count][0]['segment'])) {
                     $count++;
-                    array_push($sorted_data, array($data[$i]));
-                } else {
-                    array_push($sorted_data[$count], $data[$i]);
+                    array_push($sorted_data, array());
                 }
-            } else {
-                array_push($sorted_data, array($data[$i]));
             }
+            array_push($sorted_data[$count], $data[$i]);
         }
         return $sorted_data;
     }
