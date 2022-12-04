@@ -1,4 +1,5 @@
 <?php declare(strict_types=1);
+require_once('./classes/misc_functions.php');
 
 class PageContent {
     private $recipes;
@@ -7,14 +8,16 @@ class PageContent {
     private $preparations;
     private $tools;
     private $serving_tips;
+    private $background_info;
 
-    public function __construct($recipes, $images = '', $ingredients = '', $preparation = '', $tools = '', $serving_tips = ''){
+    public function __construct($recipes, $images = '', $ingredients = '', $preparation = '', $tools = '', $serving_tips = '', $background_info = ''){
         $this->recipes = $recipes;
         $this->images = $images;
         $this->ingredients = $ingredients;
         $this->preparation = $preparation;
         $this->tools = $tools;
         $this->serving_tips = $serving_tips;
+        $this->background_info = $background_info;
     }
     public function printAllRecipes(){
         $recipe_data = $this->recipes;
@@ -35,29 +38,42 @@ class PageContent {
     public function printRecipeContent(string $column){
         $data = $this->recipes;
         
-        $content = $data[$column];
-
-        echo $content;
+        if (isset($data[$column])) echo $data[$column];
     }
     public function printIngredientsList(){
-        $data = $this->sortIngredients($this->ingredients);
-        foreach ($data as $key_a=>$value_a){
-            if (isset($value_a[$key_a]['segment'])){
-                $segment = $value_a[$key_a]['segment'];
-                echo "<h4>${segment}</h4>";
-            }
-            foreach ($data[$key_a] as $key_b=>$value_b){
-                $quantity = $this->checkIngredientQuantity($value_b);
-                echo "<li><span>${quantity}</span>${value_b['name']}</li><span class='li-separator'></span>";
-            }
+        $data = Misc::sortIngredients($this->ingredients);
+
+        $list_string = "";
+        foreach ($data as $key_a=>$list){
+            $list_string .= "<ul>". $this->printSegment($list) . $this->printIngredient($data, $key_a) ."</ul>";
         }
+        echo $list_string;
+    }
+    public function printSegment(array $list){
+        $title = "Ingrediënten";
+        if (isset($list[0]['segment'])){
+            $title = $list[0]['segment'];
+        }
+        return "<h4>${title}:</h4>";
+    }
+    public function printIngredient(array $data, int $key){
+        $list_string = "";
+        foreach ($data[$key] as $key_b=>$ingredient){
+            $quantity = Misc::checkIngredientQuantity($ingredient);
+            $list_string .= "<li><span>${quantity}</span>${ingredient['name']}</li><span class='li-separator'></span>";
+        }
+        return $list_string;
     }
     public function printToolsList(){
         $data = $this->tools;
 
-        foreach ($data as $key=>$value){
-            echo "<li>${value['name']}</li>
-            <span class='li-separator'></span>";
+        if (isset($data[0])) {
+            $list_string = "<ul><h4>Hulpmiddelen:</h4>";
+            foreach ($data as $key=>$value){
+                $list_string .= "<li>${value['name']}</li><span class='li-separator'></span>";
+            }
+            $list_string .= "</ul>";
+            echo $list_string;
         }
     }
     public function printPreparationList(){
@@ -72,34 +88,16 @@ class PageContent {
     public function printImage(int $position){
         $data = $this->images;
 
-        $item = $data[$position-1]['path'];
-        echo "<img src=\"$item\" alt=\"\">";
+        if (isset($data[$position]['path'])) echo $data[$position]['path'];
     }
     public function printServingTip(int $position){
         $data = $this->serving_tips;
 
-        $item = $data[$position-1]['description'];
-        echo $item;
+        if (isset($data[$position]['description'])) echo $data[$position]['description'];
     }
-    public function checkIngredientQuantity(array $ingredient){
-        if (isset($ingredient['quantity'])) {
-            $quantity = $ingredient['quantity'] . "\n";
-        } else { return ""; }
-        if (isset($ingredient['unit'])) $quantity .= $ingredient['unit'] . "\n";
-        return $quantity;
-    }
-    public function sortIngredients(array $data){
-        $sorted_data = array(array());
-        $count = 0;
-        for ($i = 0; $i < count($data); $i++){
-            if (isset($data[$i-1]['segment'])) {
-                if (!($data[$i]['segment'] == $sorted_data[$count][0]['segment'])) {
-                    $count++;
-                    array_push($sorted_data, array());
-                }
-            }
-            array_push($sorted_data[$count], $data[$i]);
-        }
-        return $sorted_data;
+    public function printBackgroundInfo(int $position) {
+        $data = $this->background_info;
+
+        if (isset($data[$position]['description'])) echo $data[$position]['description'];
     }
 }

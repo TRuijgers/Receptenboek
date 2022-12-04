@@ -22,9 +22,10 @@ class Content {
         $ingredient_data = $this->dataMap->fetchJoinedData('ingredients', 'ORDER BY recipes_ingredients.segment ASC');
         $preparation_data = $this->dataMap->fetchJoinedData('preparation', 'ORDER BY recipes_preparation.sequence ASC');
         $tool_data = $this->dataMap->fetchJoinedData('tools');
-        // $serving_tip_data = $this->dataMap->fetchData('serving_tips', 'ORDER BY recipes_serving_tips.sequence ASC');
+        $serving_tip_data = $this->dataMap->fetchJoinedData('serving_tips', 'ORDER BY recipes_serving_tips.sequence ASC');
+        $background_data = $this->dataMap->fetchJoinedData('background_info', 'ORDER BY recipes_background_info.sequence ASC');
 
-        $data_bundle = new PageContent($recipe_data, $image_data, $ingredient_data, $preparation_data, $tool_data);
+        $data_bundle = new PageContent($recipe_data, $image_data, $ingredient_data, $preparation_data, $tool_data, $serving_tip_data, $background_data);
 
         return $data_bundle;
     }

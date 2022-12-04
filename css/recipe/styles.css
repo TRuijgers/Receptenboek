@@ -1,0 +1,393 @@
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+body.blue main section:nth-of-type(1) {
+  background-color: #3E87DA;
+}
+body.blue main section:nth-of-type(1) .secondary-div > div {
+  border: 1px solid #94BCEB;
+}
+body.blue main section:nth-of-type(1) .secondary-div > div > span {
+  background-color: #1D5596;
+}
+body.blue main section {
+  background-color: #1D5596;
+}
+body.blue main section .primary-div-left {
+  box-shadow: 0 0 16px #3E87DA;
+}
+body.blue main section .primary-div-left .image-container {
+  box-shadow: inset 0 0 8px #3E87DA;
+}
+body.blue main section .primary-div-right {
+  box-shadow: 0 0 16px #3E87DA;
+}
+body.blue main section .primary-div-right .text-container {
+  background-color: #1D5596;
+  box-shadow: 0 0 8px #1D5596;
+}
+body.blue main section .primary-div-right .image-container {
+  box-shadow: inset 0 0 8px #3E87DA;
+}
+body.blue main section .li-separator {
+  border: 0.5px solid #94BCEB;
+}
+body.red main section:nth-of-type(1) {
+  background-color: #d1232f;
+}
+body.red main section:nth-of-type(1) .secondary-div > div {
+  border: 1px solid #F58F96;
+}
+body.red main section:nth-of-type(1) .secondary-div > div > span {
+  background-color: #920d16;
+}
+body.red main section {
+  background-color: #920d16;
+}
+body.red main section .primary-div-left {
+  box-shadow: 0 0 16px #d1232f;
+}
+body.red main section .primary-div-left .image-container {
+  box-shadow: inset 0 0 8px #d1232f;
+}
+body.red main section .primary-div-right {
+  box-shadow: 0 0 16px #d1232f;
+}
+body.red main section .primary-div-right .text-container {
+  background-color: #920d16;
+  box-shadow: 0 0 8px #920d16;
+}
+body.red main section .primary-div-right .image-container {
+  box-shadow: inset 0 0 8px #d1232f;
+}
+body.red main section .li-separator {
+  border: 0.5px solid #F58F96;
+}
+body.orange main section:nth-of-type(1) {
+  background-color: #FD9648;
+}
+body.orange main section:nth-of-type(1) .secondary-div > div {
+  border: 1px solid #FED1AE;
+}
+body.orange main section:nth-of-type(1) .secondary-div > div > span {
+  background-color: #DE6202;
+}
+body.orange main section {
+  background-color: #DE6202;
+}
+body.orange main section .primary-div-left {
+  box-shadow: 0 0 16px #FD9648;
+}
+body.orange main section .primary-div-left .image-container {
+  box-shadow: inset 0 0 8px #FD9648;
+}
+body.orange main section .primary-div-right {
+  box-shadow: 0 0 16px #FD9648;
+}
+body.orange main section .primary-div-right .text-container {
+  background-color: #DE6202;
+  box-shadow: 0 0 8px #DE6202;
+}
+body.orange main section .primary-div-right .image-container {
+  box-shadow: inset 0 0 8px #FD9648;
+}
+body.orange main section .li-separator {
+  border: 0.5px solid #FED1AE;
+}
+
+main {
+  background-color: #EEEEEE;
+  font-family: "Cormorant Garamond", serif;
+}
+main section:nth-of-type(1) .secondary-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: #EEEEEE;
+}
+main section:nth-of-type(1) .secondary-div > div {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  right: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+main section:nth-of-type(1) .secondary-div > div > p {
+  width: 20rem;
+  font-size: 1.5rem;
+}
+main section:nth-of-type(1) .secondary-div > div > span {
+  display: block;
+  height: 1rem;
+  width: 20rem;
+}
+main section:nth-of-type(3) .secondary-div {
+  box-shadow: 0 4px 16px #EEEEEE;
+}
+main section {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section .primary-div-left {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+}
+main section .primary-div-left .bundler {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+}
+main section .primary-div-left .bundler .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 24rem;
+  width: 24rem;
+  position: relative;
+  top: 5%;
+  left: 5%;
+  margin-bottom: 1rem;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+}
+main section .primary-div-left .bundler .image-container img {
+  height: 24rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: 10%;
+  left: 12%;
+  border-radius: 1rem;
+  box-shadow: 0 0 16px #141E27;
+}
+main section .primary-div-left .bundler .title-container {
+  height: 7.4rem;
+  width: 100%;
+  position: relative;
+}
+main section .primary-div-left .bundler .title-container h3 {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #EEEEEE;
+}
+main section .primary-div-left .text-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-self: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section .primary-div-right {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 35rem;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+}
+main section .primary-div-right .text-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 15%;
+  position: relative;
+  left: 10%;
+  margin-right: 20rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+}
+main section .primary-div-right .text-container p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #EEEEEE;
+}
+main section .primary-div-right .bundler {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 55%;
+  position: relative;
+}
+main section .primary-div-right .bundler .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 24rem;
+  width: 24rem;
+  position: relative;
+  top: 5%;
+  left: 15%;
+  margin-bottom: 1rem;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+}
+main section .primary-div-right .bundler .image-container img {
+  height: 24rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: 10%;
+  right: 12%;
+  border-radius: 1rem;
+  box-shadow: 0 0 16px #141E27;
+}
+main section .primary-div-right .bundler .title-container {
+  height: 7.4rem;
+  width: 100%;
+  position: relative;
+}
+main section .primary-div-right .bundler .title-container h2, main section .primary-div-right .bundler .title-container h3 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #EEEEEE;
+}
+main section .primary-div-right .bundler .title-container h2 {
+  top: 35%;
+  left: 5%;
+  font-size: 5rem;
+}
+main section .secondary-div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  padding: 5rem 5rem;
+  background-color: #EEEEEE;
+}
+main section .secondary-div h4 {
+  font-style: normal;
+  font-size: 1.5rem;
+}
+main section .secondary-div ul {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: italic;
+}
+main section .secondary-div ul li span:first-of-type {
+  font-weight: bold;
+}
+main section .secondary-div ol {
+  padding-bottom: 1.5rem;
+  font-weight: 500;
+}
+main section .secondary-div ol li {
+  padding-top: 0.1rem;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+main section .li-separator {
+  display: block;
+  margin-bottom: 0.2rem;
+  border-radius: 50%;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  width: 100%;
+  background-color: #141E27;
+  color: #EEEEEE;
+}
+header h1 {
+  margin-top: 0.8rem;
+  margin-left: 4rem;
+  justify-content: flex-start;
+}
+header > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header > div div {
+  font-size: 1.25rem;
+  color: #EEEEEE;
+  margin: 1rem;
+}
+header > div div .nav-link {
+  text-decoration: none;
+  color: #EEEEEE;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  width: 100%;
+  background-color: #203239;
+  color: #EEEEEE;
+}
+footer > div {
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15%;
+}
+footer > div .nav-link {
+  text-decoration: none;
+  color: #EEEEEE;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}/*# sourceMappingURL=styles.css.map */

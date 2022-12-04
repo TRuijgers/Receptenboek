@@ -92,13 +92,14 @@ main ul form li button div:hover h3 {
 }
 
 body {
-  font-family: "Cormorant", serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   height: 4rem;
+  width: 100%;
   background-color: #141E27;
   color: #EEEEEE;
 }
@@ -113,7 +114,7 @@ header > div {
   align-items: center;
 }
 header > div div {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #EEEEEE;
   margin: 1rem;
 }
@@ -123,14 +124,15 @@ header > div div .nav-link {
 }
 
 footer {
-  background-color: #203239;
-  color: #EEEEEE;
-  height: 4rem;
   display: flex;
   justify-content: center;
+  height: 4rem;
+  width: 100%;
+  background-color: #203239;
+  color: #EEEEEE;
 }
 footer > div {
-  font-size: 20px;
+  font-size: 1.25rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
