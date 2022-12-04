@@ -1,15 +1,26 @@
 <?php ?>
     <section id="section3">
-        <div>
+        <div class="primary-div-right">
+            <div class="text-container">
+                <p><?php $contentDistributor->printServingTip(1); ?></p>
+            </div>
+            <div class="bundler">
+                <div class="image-container">
+                    <img src=<?php $contentDistributor->printImage(2); ?> alt="">
+                </div>
+                <div class="title-container">
+                    <h3>Bereidingswijze</h3>
+                </div>
+            </div>
+        </div>
+        <div class="secondary-div">
             <div>
-                <h3>Bereidingswijze:</h3>
                 <ol>
                     <?php 
-                        $contentDistributor->printPreparationList('preparation');
+                        $contentDistributor->printPreparationList();
                     ?>
                 </ol>
             </div>
-            <span class="section-separator"></span>
         </div>
     </section>
 <?php ?>
