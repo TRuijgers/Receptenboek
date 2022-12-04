@@ -6,6 +6,12 @@ $light-gray: rgb(172, 172, 172);
 // TODO https://stackoverflow.com/questions/14552529/dynamic-sass-variables/14552770#comment20302176_14552770
 
 body {
+    &.default {
+        $color1:  #94BCEB;
+        $color2:  #FD9648;
+        $color3: #DE6202;
+        $color4: #0C2543;
+    }
     &.blue {
         $color1:  #94BCEB;
         $color2:  #3E87DA;

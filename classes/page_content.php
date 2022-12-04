@@ -35,9 +35,7 @@ class PageContent {
     public function printRecipeContent(string $column){
         $data = $this->recipes;
         
-        $content = $data[$column];
-
-        echo $content;
+        if isset($data[$column]) echo $data[$column];
     }
     public function printIngredientsList(){
         $data = $this->sortIngredients($this->ingredients);
@@ -55,9 +53,11 @@ class PageContent {
     public function printToolsList(){
         $data = $this->tools;
 
-        foreach ($data as $key=>$value){
-            echo "<li>${value['name']}</li>
-            <span class='li-separator'></span>";
+        if (isset($data[0])) {
+            foreach ($data as $key=>$value){
+                echo "<li>${value['name']}</li>
+                <span class='li-separator'></span>";
+            }
         }
     }
     public function printPreparationList(){
@@ -72,18 +72,17 @@ class PageContent {
     public function printImage(int $position){
         $data = $this->images;
 
-        echo $data[$position-1]['path'];
+        if isset($data[$position-1]['path']) echo $data[$position-1]['path'];
     }
     public function printServingTip(int $position){
         $data = $this->serving_tips;
- 
-        echo $data[$position-1]['description'];
+
+        if isset($data[$position-1]['path']) echo $data[$position-1]['description'];
     }
     public function checkIngredientQuantity(array $ingredient){
-        if (isset($ingredient['quantity'])) {
-            $quantity = $ingredient['quantity'] . "\n";
-        } else { return ""; }
-        if (isset($ingredient['unit'])) $quantity .= $ingredient['unit'] . "\n";
+        $quantity = isset($ingredient['quantity'])? . "\n" : "";
+        
+        if isset($ingredient['unit']) $quantity .= $ingredient['unit'] . "\n";
         return $quantity;
     }
     public function sortIngredients(array $data){
