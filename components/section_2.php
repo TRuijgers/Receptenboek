@@ -2,9 +2,7 @@
     <section id="section2">
         <div>
             <div>
-                <?php 
-                    $contentDistributor->printImage(2);
-                ?>
+                <img src=<?php $contentDistributor->printImage(2); ?> alt="">
                 <div>
                     <h3>Benodigdheden:</h3>
                     <ul>

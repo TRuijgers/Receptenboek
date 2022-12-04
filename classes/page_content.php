@@ -72,14 +72,12 @@ class PageContent {
     public function printImage(int $position){
         $data = $this->images;
 
-        $item = $data[$position-1]['path'];
-        echo "<img src=\"$item\" alt=\"\">";
+        echo $data[$position-1]['path'];
     }
     public function printServingTip(int $position){
         $data = $this->serving_tips;
-
-        $item = $data[$position-1]['description'];
-        echo $item;
+ 
+        echo $data[$position-1]['description'];
     }
     public function checkIngredientQuantity(array $ingredient){
         if (isset($ingredient['quantity'])) {
