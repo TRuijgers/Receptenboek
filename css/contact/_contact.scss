@@ -1,0 +1,49 @@
+$black: #141E27;
+$blue: #34535e;
+$brown: #9f9466;
+$red: #953c3c;
+$white: #EEEEEE;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    main {
+        display: flex;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        .container {
+            height: 400px;
+            width: 400px;
+            padding: 1rem;
+            h1 {
+                font-size: 60px;
+            }
+            div {
+                padding: 5px 0px;
+                display: flex;
+                justify-content: space-between;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    h2 {
+                        font-size: 24px;
+                        display: inline;
+                    }
+                    p {
+                        display: inline;
+                        font-size: 18px;
+                    }
+                }
+                img {
+                    height: 50px;
+                    width: 50px;
+                }
+                img:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
