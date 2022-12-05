@@ -1,8 +1,7 @@
 <?php
 require_once('./classes/connect.php');
 require_once('./classes/content.php');
-require_once('./classes/page_content.php');
-require_once('./homepage/homepage.php');
+require_once('./classes/home_content.php');
 
 $contentLoader = new Content(Connect::connectToDB());
 $contentDistributor = $contentLoader->feedHomePage();
@@ -40,7 +39,7 @@ $contentDistributor = $contentLoader->feedHomePage();
         <ul>
             <form action="" method="post">
                 <?php 
-                    $contentDistributor->printAllRecipes(); 
+                    $contentDistributor->printAllRecipes();
                 ?>
             </form>
         </ul>
