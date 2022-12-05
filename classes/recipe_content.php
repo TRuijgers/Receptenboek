@@ -24,6 +24,10 @@ class RecipeContent {
         
         if (isset($data[$column])) echo $data[$column];
     }
+    public function printDescription(){
+        $data = $this->recipes;
+        if (isset($data['description'])) echo "<p>${data['description']}</p>";
+    }
     public function printIngredientsList(){
         $data = Misc::sortIngredients($this->ingredients);
 
@@ -76,7 +80,10 @@ class RecipeContent {
     public function printServingTip(int $position){
         $data = $this->serving_tips;
 
-        if (isset($data[$position]['description'])) echo $data[$position]['description'];
+        if (isset($data[$position]['description'])) {
+            $str = $data[$position]['description'];
+            echo "<p>${str}<p>";
+        }
     }
     public function printBackgroundInfo(int $position) {
         $data = $this->background_info;

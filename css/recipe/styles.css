@@ -1,15 +1,24 @@
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: black;
 }
 body.blue main section:nth-of-type(1) {
   background-color: #3E87DA;
+}
+body.blue main section:nth-of-type(1) .primary-div-right .text-container p {
+  background-color: #1D5596;
+  box-shadow: 0 0 8px #1D5596;
 }
 body.blue main section:nth-of-type(1) .secondary-div > div {
   border: 1px solid #94BCEB;
 }
 body.blue main section:nth-of-type(1) .secondary-div > div > span {
   background-color: #1D5596;
+}
+body.blue main section:nth-of-type(3) .primary-div-right .text-container p {
+  background-color: #3E87DA;
+  box-shadow: 0 0 8px #3E87DA;
 }
 body.blue main section {
   background-color: #1D5596;
@@ -19,6 +28,9 @@ body.blue main section .primary-div-left {
 }
 body.blue main section .primary-div-left .image-container {
   box-shadow: inset 0 0 8px #3E87DA;
+}
+body.blue main section .primary-div-left #option-container {
+  box-shadow: 0 0 16px #3E87DA;
 }
 body.blue main section .primary-div-left #option-container .quantity-text {
   background-color: #3E87DA;
@@ -32,10 +44,6 @@ body.blue main section .primary-div-left #option-container .quantity-option > bu
 body.blue main section .primary-div-right {
   box-shadow: 0 0 16px #3E87DA;
 }
-body.blue main section .primary-div-right .text-container {
-  background-color: #1D5596;
-  box-shadow: 0 0 8px #1D5596;
-}
 body.blue main section .primary-div-right .image-container {
   box-shadow: inset 0 0 8px #3E87DA;
 }
@@ -45,11 +53,19 @@ body.blue main section .li-separator {
 body.red main section:nth-of-type(1) {
   background-color: #d1232f;
 }
+body.red main section:nth-of-type(1) .primary-div-right .text-container p {
+  background-color: #920d16;
+  box-shadow: 0 0 8px #920d16;
+}
 body.red main section:nth-of-type(1) .secondary-div > div {
   border: 1px solid #F58F96;
 }
 body.red main section:nth-of-type(1) .secondary-div > div > span {
   background-color: #920d16;
+}
+body.red main section:nth-of-type(3) .primary-div-right .text-container p {
+  background-color: #d1232f;
+  box-shadow: 0 0 8px #d1232f;
 }
 body.red main section {
   background-color: #920d16;
@@ -59,6 +75,9 @@ body.red main section .primary-div-left {
 }
 body.red main section .primary-div-left .image-container {
   box-shadow: inset 0 0 8px #d1232f;
+}
+body.red main section .primary-div-left #option-container {
+  box-shadow: 0 0 16px #d1232f;
 }
 body.red main section .primary-div-left #option-container .quantity-text {
   background-color: #d1232f;
@@ -72,10 +91,6 @@ body.red main section .primary-div-left #option-container .quantity-option > but
 body.red main section .primary-div-right {
   box-shadow: 0 0 16px #d1232f;
 }
-body.red main section .primary-div-right .text-container {
-  background-color: #920d16;
-  box-shadow: 0 0 8px #920d16;
-}
 body.red main section .primary-div-right .image-container {
   box-shadow: inset 0 0 8px #d1232f;
 }
@@ -85,11 +100,19 @@ body.red main section .li-separator {
 body.orange main section:nth-of-type(1) {
   background-color: #FD9648;
 }
+body.orange main section:nth-of-type(1) .primary-div-right .text-container p {
+  background-color: #DE6202;
+  box-shadow: 0 0 8px #DE6202;
+}
 body.orange main section:nth-of-type(1) .secondary-div > div {
   border: 1px solid #FED1AE;
 }
 body.orange main section:nth-of-type(1) .secondary-div > div > span {
   background-color: #DE6202;
+}
+body.orange main section:nth-of-type(3) .primary-div-right .text-container p {
+  background-color: #FD9648;
+  box-shadow: 0 0 8px #FD9648;
 }
 body.orange main section {
   background-color: #DE6202;
@@ -99,6 +122,9 @@ body.orange main section .primary-div-left {
 }
 body.orange main section .primary-div-left .image-container {
   box-shadow: inset 0 0 8px #FD9648;
+}
+body.orange main section .primary-div-left #option-container {
+  box-shadow: 0 0 16px #FD9648;
 }
 body.orange main section .primary-div-left #option-container .quantity-text {
   background-color: #FD9648;
@@ -112,10 +138,6 @@ body.orange main section .primary-div-left #option-container .quantity-option > 
 body.orange main section .primary-div-right {
   box-shadow: 0 0 16px #FD9648;
 }
-body.orange main section .primary-div-right .text-container {
-  background-color: #DE6202;
-  box-shadow: 0 0 8px #DE6202;
-}
 body.orange main section .primary-div-right .image-container {
   box-shadow: inset 0 0 8px #FD9648;
 }
@@ -124,10 +146,12 @@ body.orange main section .li-separator {
 }
 
 main {
-  background-color: #EEEEEE;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #EDEDED;
   font-family: "Cormorant Garamond", serif;
 }
-main section:nth-of-type(1) .secondary-div {
+main > section:nth-of-type(1) > div:nth-of-type(2) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,36 +159,66 @@ main section:nth-of-type(1) .secondary-div {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
-  background-color: #EEEEEE;
+  background-color: #EDEDED;
 }
-main section:nth-of-type(1) .secondary-div > div {
+main > section:nth-of-type(1) > div:nth-of-type(2) > div {
   display: flex;
   flex-flow: column nowrap;
   position: relative;
-  right: 0%;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
   border-radius: 1rem;
 }
-main section:nth-of-type(1) .secondary-div > div > p {
-  width: 20rem;
+main > section:nth-of-type(1) > div:nth-of-type(2) > div > p {
+  width: 100%;
+  max-width: 25rem;
   font-size: 1.5rem;
 }
-main section:nth-of-type(1) .secondary-div > div > span {
+main > section:nth-of-type(1) > div:nth-of-type(2) > div > span {
   display: block;
   height: 1rem;
-  width: 20rem;
+  width: 100%;
+  max-width: 25rem;
+  margin-top: 0.5rem;
 }
-main section {
+main > section {
   display: flex;
   flex-flow: column;
   width: 100%;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
 }
-main section .primary-div-left {
+main > section > div:nth-of-type(2) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 3vw 3vw;
+  background-color: #EDEDED;
+  box-shadow: 0 4px 16px #EDEDED;
+}
+main > section > div:nth-of-type(2) h4 {
+  font-style: normal;
+  font-size: 1.5rem;
+}
+main > section > div:nth-of-type(2) > ul {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-style: italic;
+}
+main > section > div:nth-of-type(2) > ul > li > span {
+  font-weight: bold;
+}
+main > section > div:nth-of-type(2) ol {
+  padding-bottom: 1.5rem;
+  font-weight: 500;
+}
+main > section > div:nth-of-type(2) ol li {
+  padding-top: 0.1rem;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+main > section > .primary-div-right {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -173,84 +227,151 @@ main section .primary-div-left {
   height: fit-content;
   width: 100%;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 2rem;
 }
-main section .primary-div-left .bundler {
+main > section > .primary-div-right > div:nth-of-type(1) {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  width: 50%;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 100%;
   position: relative;
 }
-main section .primary-div-left .bundler .image-container {
+main > section > .primary-div-right > div:nth-of-type(1) .text-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  min-height: 1rem;
+  max-width: 62vw;
+  width: 18rem;
+}
+main > section > .primary-div-right > div:nth-of-type(1) .text-container p {
+  display: block;
+  margin-top: 4rem;
+  max-width: 60vw;
+  width: 20rem;
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  color: #EDEDED;
+  border-radius: 1rem;
+}
+main > section > .primary-div-right > div:nth-of-type(1) .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: center;
-  height: 24rem;
-  width: 24rem;
+  height: 20rem;
+  width: 20rem;
   position: relative;
   top: 5%;
-  left: 5%;
   margin-bottom: 1rem;
   background-color: #EEEEEE;
   border-radius: 1rem;
 }
-main section .primary-div-left .bundler .image-container img {
-  height: 24rem;
+main > section > .primary-div-right > div:nth-of-type(1) .image-container img {
+  height: 20rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
   top: 10%;
-  left: 12%;
+  right: 10%;
   border-radius: 1rem;
   box-shadow: 0 0 16px #141E27;
 }
-main section .primary-div-left .bundler .title-container {
+main > section > .primary-div-right > div:nth-of-type(2) {
+  display: flex;
   height: 7.4rem;
+  justify-content: center;
   width: 100%;
   position: relative;
 }
-main section .primary-div-left .bundler .title-container h3 {
-  width: 100%;
+main > section > .primary-div-right > div:nth-of-type(2) h2, main > section > .primary-div-right > div:nth-of-type(2) h3 {
+  width: 50%;
   position: absolute;
-  top: 45%;
-  left: 10%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 40vw;
   text-align: center;
-  font-size: 4rem;
-  color: #EEEEEE;
+  color: #EDEDED;
 }
-main section .primary-div-left #option-container {
+main > section > .primary-div-right > div:nth-of-type(2) h3 {
+  margin-top: 3.9rem;
+  font-size: 3.5rem;
+}
+main > section > .primary-div-right > div:nth-of-type(2) h2 {
+  margin-top: 2.9rem;
+  font-size: 4.5rem;
+}
+main > section > .primary-div-left {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  padding-top: 2rem;
+}
+main > section > .primary-div-left > div:nth-of-type(1) {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 100%;
+  position: relative;
+}
+main > section > .primary-div-left > div:nth-of-type(1) .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 20rem;
+  width: 20rem;
+  position: relative;
+  top: 5%;
+  right: 5%;
+  margin-bottom: 1rem;
+  margin-right: 15vw;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+}
+main > section > .primary-div-left > div:nth-of-type(1) .image-container img {
+  height: 20rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  border-radius: 1rem;
+  box-shadow: 0 0 16px #141E27;
+}
+main > section > .primary-div-left > div:nth-of-type(1) #option-container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   align-self: center;
   position: relative;
   height: 5rem;
-  width: 15rem;
-  margin-top: 10rem;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 8px #141E27;
+  width: 14rem;
+  margin: 10vh 0vw 0 0;
   border-radius: 1rem;
 }
-main section .primary-div-left #option-container .quantity-text {
+main > section > .primary-div-left > div:nth-of-type(1) #option-container .quantity-text {
   display: flex;
   flex-flow: row nowrap;
   align-content: center;
   justify-content: center;
   height: 100%;
-  width: 75%;
+  width: 80%;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-main section .primary-div-left #option-container .quantity-text > p {
+main > section > .primary-div-left > div:nth-of-type(1) #option-container .quantity-text > p {
   display: block;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -259,19 +380,17 @@ main section .primary-div-left #option-container .quantity-text > p {
   padding: 1rem;
   font-size: 2rem;
   font-weight: 700;
-  color: #EEEEEE;
+  color: #EDEDED;
 }
-main section .primary-div-left #option-container .quantity-option {
+main > section > .primary-div-left > div:nth-of-type(1) #option-container .quantity-option {
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
-  width: 25%;
-  background-color: inherit;
+  width: 20%;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  padding-left: 1rem;
 }
-main section .primary-div-left #option-container .quantity-option > button {
+main > section > .primary-div-left > div:nth-of-type(1) #option-container .quantity-option > button {
   height: 50%;
   width: 100%;
   padding-bottom: 0.3rem;
@@ -280,122 +399,138 @@ main section .primary-div-left #option-container .quantity-option > button {
   font-size: 1.8rem;
   font-weight: 700;
 }
-main section .primary-div-left #option-container .quantity-option > button:hover {
-  color: #EEEEEE;
+main > section > .primary-div-left > div:nth-of-type(1) #option-container .quantity-option > button:nth-of-type(1) {
+  border-top-left-radius: 1rem;
 }
-main section .primary-div-right {
+main > section > .primary-div-left > div:nth-of-type(1) #option-container .quantity-option > button:nth-of-type(2) {
+  border-bottom-left-radius: 1rem;
+}
+main > section > .primary-div-left > div:nth-of-type(1) #option-container .quantity-option > button:hover {
+  color: #EDEDED;
+}
+main > section > .primary-div-left > div:nth-of-type(2) {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
-  height: 35rem;
-  width: 100%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 2rem;
-}
-main section .primary-div-right .text-container {
-  display: flex;
   justify-content: center;
-  align-self: center;
-  width: 25%;
-  position: relative;
-  left: 10%;
-  padding: 1rem;
-  font-size: 1.3rem;
-  border-radius: 1rem;
-}
-main section .primary-div-right .text-container p {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #EEEEEE;
-}
-main section .primary-div-right .bundler {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  width: 70%;
-  position: relative;
-}
-main section .primary-div-right .bundler .image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  height: 24rem;
-  width: 24rem;
-  position: relative;
-  top: 5%;
-  left: 15%;
-  margin-bottom: 1rem;
-  background-color: #EEEEEE;
-  border-radius: 1rem;
-}
-main section .primary-div-right .bundler .image-container img {
-  height: 24rem;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
-  top: 10%;
-  right: 12%;
-  border-radius: 1rem;
-  box-shadow: 0 0 16px #141E27;
-}
-main section .primary-div-right .bundler .title-container {
   height: 7.4rem;
   width: 100%;
   position: relative;
 }
-main section .primary-div-right .bundler .title-container h2, main section .primary-div-right .bundler .title-container h3 {
-  width: 100%;
+main > section > .primary-div-left > div:nth-of-type(2) h3 {
+  width: 80%;
   position: absolute;
-  top: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 3.9rem;
+  margin-right: 40vw;
   text-align: center;
-  font-size: 4rem;
-  color: #EEEEEE;
+  font-size: 3.5rem;
+  color: #EDEDED;
 }
-main section .primary-div-right .bundler .title-container h2 {
-  top: 35%;
-  font-size: 5rem;
-}
-main section .secondary-div {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  width: 100%;
-  padding: 5rem 5rem;
-  background-color: #EEEEEE;
-  box-shadow: 0 4px 16px #EEEEEE;
-}
-main section .secondary-div h4 {
-  font-style: normal;
-  font-size: 1.5rem;
-}
-main section .secondary-div > ul {
-  font-size: 1.2rem;
-  font-weight: 500;
-  font-style: italic;
-}
-main section .secondary-div > ul > li > span {
-  font-weight: bold;
-}
-main section .secondary-div ol {
-  padding-bottom: 1.5rem;
-  font-weight: 500;
-}
-main section .secondary-div ol li {
-  padding-top: 0.1rem;
-  font-size: 1.4rem;
-  font-style: italic;
-}
-main section .li-separator {
+main > section .li-separator {
   display: block;
   margin-bottom: 0.2rem;
   border-radius: 50%;
+}
+@media screen and (min-width: 1280px) {
+  main > section > div:nth-of-type(2) {
+    padding: 3vw 12vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main > section .primary-div-right {
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  main > section .primary-div-right > div:nth-of-type(1) {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+  }
+  main > section .primary-div-right > div:nth-of-type(1) .image-container {
+    height: 18rem;
+    width: 18rem;
+    top: 5%;
+    margin: 0 0 1rem 2rem;
+  }
+  main > section .primary-div-right > div:nth-of-type(1) .image-container img {
+    height: 18rem;
+    top: 10%;
+    right: 10%;
+  }
+  main > section .primary-div-right > div:nth-of-type(1) .text-container {
+    min-width: 0;
+    max-width: 100%;
+    width: 80%;
+    margin-top: 2rem;
+  }
+  main > section .primary-div-right > div:nth-of-type(1) .text-container p {
+    width: 100%;
+  }
+  main > section .primary-div-right > div:nth-of-type(2) {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main > section .primary-div-right > div:nth-of-type(2) h2, main > section .primary-div-right > div:nth-of-type(2) h3 {
+    width: 80%;
+    position: relative;
+    margin: 0 0 1rem 0;
+    color: #EDEDED;
+    text-shadow: 0 0 3px #EDEDED;
+  }
+  main > section .primary-div-right > div:nth-of-type(2) h3 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+  }
+  main > section .primary-div-right > div:nth-of-type(2) h2 {
+    margin: 0 0 1rem 0;
+    font-size: 3rem;
+  }
+  main > section .primary-div-left {
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+  }
+  main > section .primary-div-left > div:nth-of-type(1) {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  main > section .primary-div-left > div:nth-of-type(1) .image-container {
+    height: 18rem;
+    width: 18rem;
+    top: 5%;
+    right: 0%;
+    margin: 0 2rem 1rem 0;
+  }
+  main > section .primary-div-left > div:nth-of-type(1) .image-container img {
+    height: 18rem;
+    top: 10%;
+    left: 10%;
+  }
+  main > section .primary-div-left > div:nth-of-type(1) #option-container {
+    margin: 2rem 0 1rem 0;
+  }
+  main > section .primary-div-left > div:nth-of-type(2) {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main > section .primary-div-left > div:nth-of-type(2) h3 {
+    width: 100%;
+    position: relative;
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    text-shadow: 0 0 3px #EDEDED;
+  }
+  main > section > div:nth-of-type(2) {
+    flex-flow: column nowrap;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+  main section:nth-of-type(1) .primary-div-right > .title-container h2 {
+    width: 80%;
+    position: relative;
+    margin-left: 0;
+  }
 }
 
 body {
