@@ -335,7 +335,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  height: 4rem;
+  min-height: 4rem;
   width: 100%;
   background-color: #141E27;
   color: #EEEEEE;
@@ -352,8 +352,8 @@ header > div {
 }
 header > div div {
   font-size: 1.25rem;
-  color: #EEEEEE;
   margin: 1rem;
+  color: #EEEEEE;
 }
 header > div div .nav-link {
   text-decoration: none;
@@ -369,10 +369,10 @@ footer {
   color: #EEEEEE;
 }
 footer > div {
-  font-size: 1.25rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-size: 1.25rem;
   width: 15%;
 }
 footer > div .nav-link {
@@ -380,6 +380,15 @@ footer > div .nav-link {
   color: #EEEEEE;
 }
 
+@media only screen and (max-width: 481.6px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  header > div {
+    justify-content: center;
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }

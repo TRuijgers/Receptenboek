@@ -1,8 +1,10 @@
 main {
+  position: relative;
+  box-shadow: 0 0 16px 8px #34535e;
   font-family: "Cormorant Garamond", serif;
 }
 main > div:first-of-type {
-  background: #E0DDAA;
+  background: #953c3c;
 }
 main > div:first-of-type div {
   background-image: url("//static.theprint.in/wp-content/uploads/2019/08/indian-cuisine.jpg");
@@ -12,12 +14,15 @@ main > div:first-of-type div {
 }
 main > div:first-of-type div h1 {
   font-size: 10vw;
-  color: #EEEDDE;
+  color: #EEEEEE;
 }
 main .aboutUs {
+  position: relative;
+  box-shadow: 0 0 16px #953c3c;
+  color: #EEEEEE;
   height: 25rem;
   width: 100%;
-  background-color: #E0DDAA;
+  background-color: #953c3c;
   text-align: center;
   padding: 8vw 5rem;
 }
@@ -27,7 +32,7 @@ main .aboutUs h2 {
 main ul {
   color: #141E27;
   padding: 5rem;
-  background-color: #EEEDDE;
+  background-color: #EEEEEE;
   width: 100%;
   min-height: 33.75rem;
 }
@@ -45,7 +50,7 @@ main ul form li {
 main ul form li button {
   position: relative;
   border: none;
-  background-color: #EEEDDE;
+  background-color: #EEEEEE;
   border-radius: 1rem;
   height: 15rem;
   width: 15rem;
@@ -61,7 +66,7 @@ main ul form li button img {
   width: 100%;
   height: 15rem;
   border-radius: 1rem;
-  background-color: #EEEDDE;
+  background-color: #EEEEEE;
 }
 main ul form li button div {
   position: absolute;
@@ -80,7 +85,7 @@ main ul form li button div h3 {
   font-family: "Cormorant Garamond", serif;
   padding-top: 2rem;
   font-size: 3rem;
-  color: #EEEDDE;
+  color: #EEEEEE;
   font-weight: 600;
 }
 main ul form li button div:hover {
@@ -98,7 +103,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  height: 4rem;
+  min-height: 4rem;
   width: 100%;
   background-color: #141E27;
   color: #EEEEEE;
@@ -115,8 +120,8 @@ header > div {
 }
 header > div div {
   font-size: 1.25rem;
-  color: #EEEEEE;
   margin: 1rem;
+  color: #EEEEEE;
 }
 header > div div .nav-link {
   text-decoration: none;
@@ -132,10 +137,10 @@ footer {
   color: #EEEEEE;
 }
 footer > div {
-  font-size: 1.25rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-size: 1.25rem;
   width: 15%;
 }
 footer > div .nav-link {
@@ -143,6 +148,15 @@ footer > div .nav-link {
   color: #EEEEEE;
 }
 
+@media only screen and (max-width: 481.6px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  header > div {
+    justify-content: center;
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }

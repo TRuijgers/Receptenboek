@@ -1,13 +1,15 @@
 $black: #141E27;
-$blue: #203239;
+$blue: #34535e;
 $brown: #9f9466;
-$yellow: #E0DDAA;
-$white: #EEEDDE;
+$red: #953c3c;
+$white: #EEEEEE;
 
 main {
+    position: relative;
+    box-shadow: 0 0 16px 8px $blue;
     font-family: "Cormorant Garamond", serif;
     > div:first-of-type {
-        background: $yellow;
+        background: $red;
         div {
             background-image:url("//static.theprint.in/wp-content/uploads/2019/08/indian-cuisine.jpg");
             background-repeat: no-repeat;
@@ -20,9 +22,12 @@ main {
         }
     }
     .aboutUs {
+        position: relative;
+        box-shadow: 0 0 16px $red;
+        color: $white;
         height: 25rem;
         width: 100%;
-        background-color: $yellow;
+        background-color: $red;
         text-align: center;
         padding: 8vw 5rem;
         h2 {
@@ -87,6 +92,7 @@ main {
                         backdrop-filter: blur(0.2rem);
                         h3 {
                             display: block;
+
                         }
                     }
                 }   
