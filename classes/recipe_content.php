@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 require_once('./classes/misc_functions.php');
 
-class PageContent {
+class RecipeContent {
     private $recipes;
     private $images;
     private $ingredients;
@@ -18,22 +18,6 @@ class PageContent {
         $this->tools = $tools;
         $this->serving_tips = $serving_tips;
         $this->background_info = $background_info;
-    }
-    public function printAllRecipes(){
-        $recipe_data = $this->recipes;
-        $image_data = $this->images;
-        foreach ($recipe_data as $key=>$value){
-            echo 
-                "<li>
-                    <button formaction='recipe.php?id=${value['id']}' type='submit' name=\"${value['id']}\" id=\"${value['id']}\">
-                        <img src=\"${image_data[$key]}\">
-                            <div class='centered'>
-                                <h3>${value['title']}</h3>
-                            </div>
-                        </img>
-                    </button>
-                </li>";
-        }
     }
     public function printRecipeContent(string $column){
         $data = $this->recipes;
@@ -77,7 +61,6 @@ class PageContent {
         }
     }
     public function printPreparationList(){
-        // Use for preparation steps
         $data = $this->preparation;
 
         foreach ($data as $key=>$value){

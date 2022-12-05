@@ -1,3 +1,17 @@
+$black: #141E27;
+$blue: #34535e;
+$brown: #9f9466;
+$red: #953c3c;
+$white: #EEEEEE;
 body {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    main {
+        display: flex;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+    }
 }

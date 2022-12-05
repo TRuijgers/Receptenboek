@@ -1,6 +1,7 @@
 <?php declare(strict_types=1);
 require_once('./classes/collect.php');
-require_once('./classes/page_content.php');
+require_once('./classes/recipe_content.php');
+require_once('./classes/home_content.php');
 
 class Content {
     private $dataMap;
@@ -12,7 +13,7 @@ class Content {
     public function feedHomePage(){
         $recipe_data = $this->dataMap->fetchData('recipes', 'ORDER BY id ASC');
         $image_data = array_merge(...($this->dataMap->fetchImages()));
-        $data_bundle = new PageContent($recipe_data, $image_data);
+        $data_bundle = new HomeContent($recipe_data, $image_data);
 
         return $data_bundle;
     }
@@ -25,7 +26,7 @@ class Content {
         $serving_tip_data = $this->dataMap->fetchJoinedData('serving_tips', 'ORDER BY recipes_serving_tips.sequence ASC');
         $background_data = $this->dataMap->fetchJoinedData('background_info', 'ORDER BY recipes_background_info.sequence ASC');
 
-        $data_bundle = new PageContent($recipe_data, $image_data, $ingredient_data, $preparation_data, $tool_data, $serving_tip_data, $background_data);
+        $data_bundle = new RecipeContent($recipe_data, $image_data, $ingredient_data, $preparation_data, $tool_data, $serving_tip_data, $background_data);
 
         return $data_bundle;
     }
