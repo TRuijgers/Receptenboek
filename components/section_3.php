@@ -2,7 +2,7 @@
     <section id="section3">
         <div class="primary-div-right">
             <div class="text-container">
-                <p><?php $contentDistributor->printServingTip(1); ?></p>
+                <p><?php $contentDistributor->printServingTip(0); ?></p>
             </div>
             <div class="bundler">
                 <div class="image-container">

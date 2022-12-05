@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-if($loggedIn == false){
-  header("HTTP/1.0 404 Not Found");
-} else{
-  //some other code
-}
+// if($loggedIn == false){
+//   header("HTTP/1.0 404 Not Found");
+// } else{
+//   //some other code
+// }
 
 ?>
 <!DOCTYPE html>
@@ -25,11 +25,15 @@ if($loggedIn == false){
 </head>
 
 
+
 <body>
-    <?php include_once('./components/header.php'); ?>
-    <main>
-    </main>
-    <?php include_once('./components/footer.php'); ?>
+  <?php include_once('./components/header.php'); ?>
+  <main>
+    <section>
+      <form action=""></form>
+    </section>
+  </main>
+  <?php include_once('./components/footer.php'); ?>
 </body>
 
 </html>
