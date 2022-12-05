@@ -7,17 +7,18 @@ $white: #EEEEEE;
 main {
     color: $white;
     position: relative;
-    box-shadow: 0 0 16px 8px $blue;
+    box-shadow: 0 0 16px 8px $red;
     font-family: "Cormorant Garamond", serif;
     > div:first-of-type {
         background: $red;
         div {
-            background-image:url("//static.theprint.in/wp-content/uploads/2019/08/indian-cuisine.jpg");
+            background-image:url("https://www.blueosa.com/wp-content/uploads/2020/01/the-best-top-10-indian-dishes.jpg");
             background-repeat: no-repeat;
             background-size: 100%;
             padding: 4.5rem 3rem;
             h1 {
                 font-size: 10vw;
+                text-shadow: 1px 1px black;
             }
         }
     }

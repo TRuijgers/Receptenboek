@@ -1,20 +1,21 @@
 main {
   color: #EEEEEE;
   position: relative;
-  box-shadow: 0 0 16px 8px #34535e;
+  box-shadow: 0 0 16px 8px #953c3c;
   font-family: "Cormorant Garamond", serif;
 }
 main > div:first-of-type {
   background: #953c3c;
 }
 main > div:first-of-type div {
-  background-image: url("//static.theprint.in/wp-content/uploads/2019/08/indian-cuisine.jpg");
+  background-image: url("https://www.blueosa.com/wp-content/uploads/2020/01/the-best-top-10-indian-dishes.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 4.5rem 3rem;
 }
 main > div:first-of-type div h1 {
   font-size: 10vw;
+  text-shadow: 1px 1px black;
 }
 main .aboutUs {
   position: relative;
