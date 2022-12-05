@@ -45,6 +45,7 @@ footer {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        gap: 16px;
         font-size: 1.25rem;
         width: 15%;
         .nav-link {
@@ -53,7 +54,6 @@ footer {
         }
     }
 }
-// change header when screen goes smaller then 481.600
 @media only screen and (max-width: 481.6px) {
     header {
         flex-direction: column;

@@ -1,4 +1,5 @@
 main {
+  color: #EEEEEE;
   position: relative;
   box-shadow: 0 0 16px 8px #34535e;
   font-family: "Cormorant Garamond", serif;
@@ -14,12 +15,10 @@ main > div:first-of-type div {
 }
 main > div:first-of-type div h1 {
   font-size: 10vw;
-  color: #EEEEEE;
 }
 main .aboutUs {
   position: relative;
   box-shadow: 0 0 16px #953c3c;
-  color: #EEEEEE;
   height: 25rem;
   width: 100%;
   background-color: #953c3c;
@@ -30,7 +29,6 @@ main .aboutUs h2 {
   margin-bottom: 1rem;
 }
 main ul {
-  color: #141E27;
   padding: 5rem;
   background-color: #EEEEEE;
   width: 100%;
@@ -96,6 +94,11 @@ main ul form li button div:hover h3 {
   display: block;
 }
 
+@media only screen and (max-width: 481.6px) {
+  main .aboutUs {
+    height: 30rem;
+  }
+}
 body {
   font-family: "Cormorant Garamond", serif;
 }
@@ -140,6 +143,7 @@ footer > div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 16px;
   font-size: 1.25rem;
   width: 15%;
 }

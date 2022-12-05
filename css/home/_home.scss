@@ -5,6 +5,7 @@ $red: #953c3c;
 $white: #EEEEEE;
 
 main {
+    color: $white;
     position: relative;
     box-shadow: 0 0 16px 8px $blue;
     font-family: "Cormorant Garamond", serif;
@@ -17,14 +18,12 @@ main {
             padding: 4.5rem 3rem;
             h1 {
                 font-size: 10vw;
-                color: $white;
             }
         }
     }
     .aboutUs {
         position: relative;
         box-shadow: 0 0 16px $red;
-        color: $white;
         height: 25rem;
         width: 100%;
         background-color: $red;
@@ -35,7 +34,6 @@ main {
         }
     }
     ul {
-        color: $black;
         padding: 5rem;
         background-color: $white;
         width: 100%;
@@ -97,6 +95,13 @@ main {
                     }
                 }   
             }     
+        }
+    }
+}
+@media only screen and (max-width: 481.6px) {
+    main {
+        .aboutUs {
+            height: 30rem;
         }
     }
 }
