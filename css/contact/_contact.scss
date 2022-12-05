@@ -9,9 +9,12 @@ body {
     justify-content: space-between;
     height: 100vh;
     main {
+        position: relative;
+        box-shadow: 0 0 16px 8px $blue;
         display: flex;
         width: 100%;
-        align-content: center;
+        height: 100%;
+        align-items: center;
         justify-content: center;
         .container {
             height: 400px;
