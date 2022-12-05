@@ -1,4 +1,49 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+body main {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+body main .container {
+  height: 400px;
+  width: 400px;
+  padding: 1rem;
+}
+body main .container h1 {
+  font-size: 60px;
+}
+body main .container div {
+  padding: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .container div div {
+  display: flex;
+  flex-direction: column;
+}
+body main .container div div h2 {
+  font-size: 24px;
+  display: inline;
+}
+body main .container div div p {
+  display: inline;
+  font-size: 18px;
+}
+body main .container div img {
+  height: 50px;
+  width: 50px;
+}
+body main .container div img:hover {
+  cursor: pointer;
+}
+
+body {
   font-family: "Cormorant Garamond", serif;
 }
 

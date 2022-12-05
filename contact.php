@@ -22,6 +22,36 @@
 <body>
     <?php include_once('./components/header.php'); ?>
     <main>
+        <div class="container">
+            <h1>Contact</h1>
+            <div>
+                <div>
+                    <h2>Facebook:</h2>
+                    <p>fakeFacebookName</p>
+                </div>
+                <a href="https://www.facebook.com/">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/900px-Facebook_f_logo_%282019%29.svg.png">
+                </a>
+            </div>
+            <div>
+                <div>
+                    <h2>Twitter:</h2>
+                    <p>fakeTwitterName</p>
+                </div>
+                <a href="https://twitter.com/">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/768px-Twitter-logo.svg.png?20220821125553">
+                </a>
+            </div>
+            <div>
+                <div>
+                    <h2>E-mail:</h2>
+                    <p>fakeMail@faking.fake</p>
+                </div>
+                <a href="https://www.google.com/intl/nl/gmail/about/">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mail_%28iOS%29.svg/900px-Mail_%28iOS%29.svg.png?20141024222707">
+                </a>
+            </div>
+        </div>
     </main>
     <?php include_once('./components/footer.php'); ?>
 </body>
