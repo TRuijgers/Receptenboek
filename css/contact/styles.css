@@ -5,9 +5,12 @@ body {
   height: 100vh;
 }
 body main {
+  position: relative;
+  box-shadow: 0 0 16px 8px #34535e;
   display: flex;
   width: 100%;
-  align-content: center;
+  height: 100%;
+  align-items: center;
   justify-content: center;
 }
 body main .container {
