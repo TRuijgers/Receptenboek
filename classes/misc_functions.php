@@ -16,9 +16,9 @@ class Misc {
         return $sorted_data;
     }
     public static function checkIngredientQuantity(array $ingredient){
-        $quantity = isset($ingredient['quantity'])? $ingredient['quantity'] . "\n" : "";
+        $quantity = isset($ingredient['quantity'])? "<span class=\"quantity\">${ingredient['quantity']}</span>\n" : "";
 
-        if (isset($ingredient['unit'])) $quantity .= $ingredient['unit'] . "\n";
+        if (isset($ingredient['unit'])) $quantity .= "<span class=\"unit\">${ingredient['unit']}</span>\n";
         return $quantity;
     }
 }

@@ -21,7 +21,7 @@ $contentDistributor = $contentLoader->feedRecipePage();
 
     <link href="./css/recipe/styles.css" rel="stylesheet">
     
-    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/recipe.js" defer></script>
 </head>
 
 

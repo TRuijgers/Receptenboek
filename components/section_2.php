@@ -9,8 +9,17 @@
                     <h3>Benodigdheden</h3>
                 </div>
             </div>
-            <div class="text-container">
-                <p><?php $contentDistributor->printServingTip(0); ?></p>
+            <div id="option-container">
+                <div class="quantity-option">
+                    <button id="plus">&plus;</button>
+                    <button id="minus">&minus;</button>
+                </div>
+                <div class="quantity-text">
+                    <p>
+                        <span id="quantity-display"><?php $contentDistributor->printRecipeContent('quantity');?></span>
+                        <span><?php $contentDistributor->printRecipeContent('unit');?></span>
+                    </p>
+                </div>
             </div>
         </div>
         <div class="secondary-div">

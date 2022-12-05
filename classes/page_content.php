@@ -60,7 +60,7 @@ class PageContent {
         $list_string = "";
         foreach ($data[$key] as $key_b=>$ingredient){
             $quantity = Misc::checkIngredientQuantity($ingredient);
-            $list_string .= "<li><span>${quantity}</span>${ingredient['name']}</li><span class='li-separator'></span>";
+            $list_string .= "<li>${quantity}${ingredient['name']}</li><span class='li-separator'></span>";
         }
         return $list_string;
     }
