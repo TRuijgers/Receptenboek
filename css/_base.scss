@@ -24,6 +24,7 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        margin-right: 2rem;
         div {
             font-size: 1.25rem;
             margin: 1rem;
@@ -34,9 +35,12 @@ header {
             }
         }
     }
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 1280px) {
         h1 {
             margin-left: 0;
+        }
+        > div {
+            margin-right: 0;
         }
     }
 }

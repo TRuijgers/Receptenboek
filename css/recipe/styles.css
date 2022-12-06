@@ -160,37 +160,6 @@ main {
   background-color: #EDEDED;
   font-family: "Cormorant Garamond", serif;
 }
-main > section:nth-of-type(1) > div:nth-of-type(2) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-  background-color: #EDEDED;
-}
-main > section:nth-of-type(1) > div:nth-of-type(2) > div {
-  display: flex;
-  flex-flow: column nowrap;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-main > section:nth-of-type(1) > div:nth-of-type(2) > div > p {
-  width: 100%;
-  max-width: 25rem;
-  font-size: 1.5rem;
-}
-main > section:nth-of-type(1) > div:nth-of-type(2) > div > span {
-  display: block;
-  height: 1rem;
-  width: 100%;
-  max-width: 25rem;
-  margin-top: 0.5rem;
-}
 main > section {
   display: flex;
   flex-flow: column;
@@ -226,6 +195,43 @@ main > section > div:nth-of-type(2) ol li {
   padding-top: 0.1rem;
   font-size: 1.4rem;
   font-style: italic;
+}
+main > section .li-separator {
+  display: block;
+  margin-bottom: 0.2rem;
+  border-radius: 50%;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: #EDEDED;
+}
+main > section:nth-of-type(1) > div:nth-of-type(2) > div {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+main > section:nth-of-type(1) > div:nth-of-type(2) > div > p {
+  width: 100%;
+  max-width: 25rem;
+  font-size: 1.5rem;
+}
+main > section:nth-of-type(1) > div:nth-of-type(2) > div > span {
+  display: block;
+  height: 1rem;
+  width: 100%;
+  max-width: 25rem;
+  margin-top: 0.5rem;
 }
 main > section > .primary-div-right {
   display: flex;
@@ -319,6 +325,7 @@ main > section > .primary-div-right > div:nth-of-type(2) h2 {
   margin-top: 2.9rem;
   font-size: 4.5rem;
 }
+
 main > section > .primary-div-left {
   display: flex;
   flex-flow: row wrap;
@@ -438,11 +445,7 @@ main > section > .primary-div-left > div:nth-of-type(2) h3 {
   font-size: 3.5rem;
   color: #EDEDED;
 }
-main > section .li-separator {
-  display: block;
-  margin-bottom: 0.2rem;
-  border-radius: 50%;
-}
+
 @media screen and (min-width: 1280px) {
   main > section .primary-div-right > div:nth-of-type(1) .image-container {
     left: 8%;
@@ -593,6 +596,7 @@ header > div {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-right: 2rem;
 }
 header > div div {
   font-size: 1.25rem;
@@ -603,9 +607,12 @@ header > div div .nav-link {
   text-decoration: none;
   color: #EEEEEE;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 1280px) {
   header h1 {
     margin-left: 0;
+  }
+  header > div {
+    margin-right: 0;
   }
 }
 
