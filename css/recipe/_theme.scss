@@ -5,7 +5,7 @@ main {
             .text-container {
                 p {
                     background-color: $color2;
-                    box-shadow: 0 0 8px $color2;
+                    // box-shadow: 0 0 8px $color2;
                 }
             }
         }
@@ -26,7 +26,7 @@ main {
                 }
                 > div, > p {
                     background-color: $color2;
-                    box-shadow: 0 0 8px $color2;
+                    // box-shadow: 0 0 8px $color2;
                 }
             }
         }
@@ -40,7 +40,7 @@ main {
                 box-shadow: inset 0 0 8px $color2;
             }
             #option-container {
-                box-shadow: 0 0 16px $color2;
+                // box-shadow: 0 0 16px $color2;
                 .quantity-text {
                     background-color: $color2;
                 }

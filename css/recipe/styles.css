@@ -8,7 +8,6 @@ body.blue main section:nth-of-type(1) {
 }
 body.blue main section:nth-of-type(1) .primary-div-right .text-container p {
   background-color: #3E87DA;
-  box-shadow: 0 0 8px #3E87DA;
 }
 body.blue main section:nth-of-type(1) .secondary-div > div {
   border: 1px solid #94BCEB;
@@ -21,7 +20,6 @@ body.blue main section:nth-of-type(3) .primary-div-right .text-container h4 {
 }
 body.blue main section:nth-of-type(3) .primary-div-right .text-container > div, body.blue main section:nth-of-type(3) .primary-div-right .text-container > p {
   background-color: #3E87DA;
-  box-shadow: 0 0 8px #3E87DA;
 }
 body.blue main section {
   background-color: #1D5596;
@@ -31,9 +29,6 @@ body.blue main section .primary-div-left {
 }
 body.blue main section .primary-div-left .image-container {
   box-shadow: inset 0 0 8px #3E87DA;
-}
-body.blue main section .primary-div-left #option-container {
-  box-shadow: 0 0 16px #3E87DA;
 }
 body.blue main section .primary-div-left #option-container .quantity-text {
   background-color: #3E87DA;
@@ -58,7 +53,6 @@ body.red main section:nth-of-type(1) {
 }
 body.red main section:nth-of-type(1) .primary-div-right .text-container p {
   background-color: #d1232f;
-  box-shadow: 0 0 8px #d1232f;
 }
 body.red main section:nth-of-type(1) .secondary-div > div {
   border: 1px solid #F58F96;
@@ -71,7 +65,6 @@ body.red main section:nth-of-type(3) .primary-div-right .text-container h4 {
 }
 body.red main section:nth-of-type(3) .primary-div-right .text-container > div, body.red main section:nth-of-type(3) .primary-div-right .text-container > p {
   background-color: #d1232f;
-  box-shadow: 0 0 8px #d1232f;
 }
 body.red main section {
   background-color: #920d16;
@@ -81,9 +74,6 @@ body.red main section .primary-div-left {
 }
 body.red main section .primary-div-left .image-container {
   box-shadow: inset 0 0 8px #d1232f;
-}
-body.red main section .primary-div-left #option-container {
-  box-shadow: 0 0 16px #d1232f;
 }
 body.red main section .primary-div-left #option-container .quantity-text {
   background-color: #d1232f;
@@ -108,7 +98,6 @@ body.orange main section:nth-of-type(1) {
 }
 body.orange main section:nth-of-type(1) .primary-div-right .text-container p {
   background-color: #FD9648;
-  box-shadow: 0 0 8px #FD9648;
 }
 body.orange main section:nth-of-type(1) .secondary-div > div {
   border: 1px solid #FED1AE;
@@ -121,7 +110,6 @@ body.orange main section:nth-of-type(3) .primary-div-right .text-container h4 {
 }
 body.orange main section:nth-of-type(3) .primary-div-right .text-container > div, body.orange main section:nth-of-type(3) .primary-div-right .text-container > p {
   background-color: #FD9648;
-  box-shadow: 0 0 8px #FD9648;
 }
 body.orange main section {
   background-color: #DE6202;
@@ -131,9 +119,6 @@ body.orange main section .primary-div-left {
 }
 body.orange main section .primary-div-left .image-container {
   box-shadow: inset 0 0 8px #FD9648;
-}
-body.orange main section .primary-div-left #option-container {
-  box-shadow: 0 0 16px #FD9648;
 }
 body.orange main section .primary-div-left #option-container .quantity-text {
   background-color: #FD9648;
@@ -275,7 +260,6 @@ main > section > .primary-div-right > div:nth-of-type(1) .text-container > div, 
   font-weight: 500;
   text-align: center;
   color: #EDEDED;
-  border-radius: 1rem;
 }
 main > section > .primary-div-right > div:nth-of-type(1) .image-container {
   display: flex;
