@@ -1,17 +1,76 @@
 $black: #141E27;
-$blue: #34535e;
-$brown: #9f9466;
+$light-blue:  #94BCEB;
+$blue: #3E87DA;
+$gray-blue: #34535e;
+$gray: #CBCBCB;
 $red: #953c3c;
-$white: #EEEEEE;
+$bright-red: #d1232f;
+$white: #EDEDED;
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    background-color: $white;
     main {
         display: flex;
-        width: 100%;
         align-content: center;
         justify-content: center;
+        form {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+            justify-content: center;
+            min-height: 60vh;
+            min-width: 50vw;
+            border-radius: 1rem;
+            box-shadow: 0 0 16px $gray;
+            section {
+                width: 100%;
+            }
+            > div:nth-of-type(1) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: fit-content;
+                height: 5vh;
+                width: 100%;
+                border-bottom: 1px solid $gray-blue;
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+            > div:nth-of-type(2) {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                height: 15%;
+                width: 100%;
+                position: relative;
+                border-top: 1px solid $gray-blue;
+                > p {
+                    height: 30%;
+                    width: 30%;
+                    position: relative;
+                    left: 70%;
+                    color: $bright-red;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                input[type=submit] {
+                    width: 20%;
+                    margin: 1rem auto;
+                    border: 1px solid $blue;
+                    border-radius: 0.5rem;
+                    font-family: 'Cormorant Garamond', serif;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    &:hover {
+                        color: $white;
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
     }
 }

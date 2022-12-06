@@ -27,13 +27,29 @@
 
 
 <body>
-  <?php include_once('./components/header.php'); ?>
-  <main>
-    <section>
-      <form action=""></form>
-    </section>
-  </main>
-  <?php include_once('./components/footer.php'); ?>
+    <?php include_once('./components/header.php'); ?>
+    <main>
+        <article>
+            <form action="">
+                <div><h2>Invoegformulier</h2></div>
+                <section id="basic">
+                    <div id="recipes"></div>
+                    <div id="images"></div>
+                    <div id="background_info"></div>
+                </section>
+                <section id="lists">
+                    <div id="ingredients"></div>
+                    <div id="tools"></div>
+                    <div id="preparation"></div>
+                </section>
+                <div>
+                    <p>Velden met een * zijn verplicht.</p>
+                    <input type="submit">
+                </div>
+            </form>
+        </article>
+    </main>
+    <?php include_once('./components/footer.php'); ?>
 </body>
 
 </html>
