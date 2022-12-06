@@ -32,7 +32,7 @@ class RecipeContent {
     public function printServingTip() {
         $data = $this->recipes;
 
-        if (isset($data['serving_tip'])) echo "<p>${data['serving_tip']}</p>";
+        if (isset($data['serving_tip'])) echo "<h4>Serveertip:</h4><p>${data['serving_tip']}</p>";
     }
     public function printIngredientsList(){
         $data = Misc::sortIngredients($this->ingredients);
@@ -48,7 +48,7 @@ class RecipeContent {
         if (isset($list[0]['segment'])){
             $title = $list[0]['segment'];
         }
-        return "<h4>${title}:</h4>";
+        return "<h5>${title}:</h5>";
     }
     public function printIngredient(array $data, int $key){
         $list_string = "";
@@ -62,7 +62,7 @@ class RecipeContent {
         $data = $this->tools;
 
         if (isset($data[0])) {
-            $list_string = "<ul><h4>Hulpmiddelen:</h4>";
+            $list_string = "<ul><h5>Hulpmiddelen:</h5>";
             foreach ($data as $key=>$value){
                 $list_string .= "<li>${value['name']}</li><span class='li-separator'></span>";
             }

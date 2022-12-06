@@ -3,7 +3,9 @@
         <div class="primary-div-right">
             <div class="bundler">
                 <div class="text-container">
-                    <?php $contentDistributor->printServingTip(); ?>
+                    <div>
+                        <?php $contentDistributor->printServingTip(); ?>
+                    </div>
                 </div>
                 <div class="image-container">
                     <img src=<?php $contentDistributor->printImage(2); ?> alt="">

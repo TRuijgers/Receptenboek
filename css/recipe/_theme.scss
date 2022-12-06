@@ -1,11 +1,11 @@
 main {
     section:nth-of-type(1) {
-        background-color: $color2;
+        background-color: $color3;
         .primary-div-right {
             .text-container {
                 p {
-                    background-color: $color3;
-                    box-shadow: 0 0 8px $color3;
+                    background-color: $color2;
+                    box-shadow: 0 0 8px $color2;
                 }
             }
         }
@@ -21,7 +21,10 @@ main {
     section:nth-of-type(3) {
         .primary-div-right {
             .text-container {
-                p {
+                h4 {
+                    border-bottom: 1px solid $color3;
+                }
+                > div, > p {
                     background-color: $color2;
                     box-shadow: 0 0 8px $color2;
                 }

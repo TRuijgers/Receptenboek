@@ -91,7 +91,7 @@ main {
             padding: 3vw 3vw;
             background-color: $white;
             box-shadow: 0 4px 16px $white;
-            h4 {
+            h5 {
                 font-style: normal;
                 font-size: 1.5rem;
             }
@@ -137,7 +137,11 @@ main {
                     min-height: 1rem;
                     max-width: 62vw;
                     width: 18rem;
-                    p {
+                    h4 {
+                        font-size: 1.8rem;
+                        border-bottom: 1px solid $color3;
+                    }
+                    > div, > p {
                         display: block;
                         margin-top: 4rem;
                         max-width: 60vw;
