@@ -59,9 +59,10 @@ header {
   color: #EEEEEE;
 }
 header h1 {
+  display: flex;
   margin-top: 0.8rem;
   margin-left: 4rem;
-  justify-content: flex-start;
+  justify-content: center;
 }
 header > div {
   display: flex;
@@ -76,6 +77,11 @@ header > div div {
 header > div div .nav-link {
   text-decoration: none;
   color: #EEEEEE;
+}
+@media screen and (max-width: 300px) {
+  header h1 {
+    margin-left: 0;
+  }
 }
 
 footer {

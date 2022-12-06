@@ -4,7 +4,7 @@
 
             <div class="bundler">
                 <div class="text-container">
-                    <?php $contentDistributor->printDescription()?>
+                    <?php $contentDistributor->printBackgroundInfo(0)?>
                 </div>
                 <div class="image-container">
                     <img src=<?php $contentDistributor->printImage(0); ?> alt="">
@@ -17,7 +17,7 @@
         <div class="secondary-div">
             <div>
                 <p>
-                    <?php $contentDistributor->printBackgroundInfo(0); ?>
+                    <?php $contentDistributor->printBackgroundInfo(1); ?>
                 </p>
                 <span></span>
             </div>

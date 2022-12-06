@@ -1,14 +1,19 @@
+header {
+  position: relative;
+  box-shadow: 0 0 16px #141E27;
+  z-index: 2;
+}
+
 main {
   color: #EEEEEE;
   position: relative;
-  box-shadow: 0 0 16px 8px #953c3c;
   font-family: "Cormorant Garamond", serif;
 }
 main > div:first-of-type {
   background: #953c3c;
 }
 main > div:first-of-type div {
-  background-image: url("https://www.blueosa.com/wp-content/uploads/2020/01/the-best-top-10-indian-dishes.jpg");
+  background-image: url("../../images/the-best-top-10-indian-dishes.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 4.5rem 3rem;
@@ -95,6 +100,11 @@ main ul form li button div:hover h3 {
   display: block;
 }
 
+footer {
+  position: relative;
+  box-shadow: 0 0 16px #34535e;
+}
+
 @media only screen and (max-width: 481.6px) {
   main .aboutUs {
     height: 30rem;
@@ -113,9 +123,10 @@ header {
   color: #EEEEEE;
 }
 header h1 {
+  display: flex;
   margin-top: 0.8rem;
   margin-left: 4rem;
-  justify-content: flex-start;
+  justify-content: center;
 }
 header > div {
   display: flex;
@@ -130,6 +141,11 @@ header > div div {
 header > div div .nav-link {
   text-decoration: none;
   color: #EEEEEE;
+}
+@media screen and (max-width: 300px) {
+  header h1 {
+    margin-left: 0;
+  }
 }
 
 footer {

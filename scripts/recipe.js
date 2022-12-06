@@ -10,11 +10,12 @@ var multiplier = 0;
 
 
 function checkOperation(e){
+    var displayValue = Math.round((parseFloat(quantityDisplay.innerText) * multiplier) * 1000);
     if (e.target.id == "plus" && index <= 15){
         index += 0.25;
         multiplier = index / 1;
         multiplyQuantity(multiplier);
-    } else if (e.target.id == "minus" && index > 0.25){
+    } else if (e.target.id == "minus" && (index > 0.25 && displayValue > 1)){
         index -= 0.25;
         multiplier = index;
         multiplyQuantity(multiplier);

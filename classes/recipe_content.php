@@ -7,16 +7,14 @@ class RecipeContent {
     private $ingredients;
     private $preparations;
     private $tools;
-    private $serving_tips;
     private $background_info;
 
-    public function __construct($recipes, $images = '', $ingredients = '', $preparation = '', $tools = '', $serving_tips = '', $background_info = ''){
+    public function __construct($recipes, $images = '', $ingredients = '', $preparation = '', $tools = '', $background_info = ''){
         $this->recipes = $recipes;
         $this->images = $images;
         $this->ingredients = $ingredients;
         $this->preparation = $preparation;
         $this->tools = $tools;
-        $this->serving_tips = $serving_tips;
         $this->background_info = $background_info;
     }
     public function printRecipeContent(string $column){
@@ -24,9 +22,17 @@ class RecipeContent {
         
         if (isset($data[$column])) echo $data[$column];
     }
-    public function printDescription(){
+    public function printBackgroundInfo(int $position) {
+        $data = $this->background_info;
+        if (isset($data[$position]['description'])){
+            $info = $data[$position]['description'];
+        }
+        echo "<p>${info}</p>";
+    }
+    public function printServingTip() {
         $data = $this->recipes;
-        if (isset($data['description'])) echo "<p>${data['description']}</p>";
+
+        if (isset($data['serving_tip'])) echo "<p>${data['serving_tip']}</p>";
     }
     public function printIngredientsList(){
         $data = Misc::sortIngredients($this->ingredients);
@@ -76,18 +82,5 @@ class RecipeContent {
         $data = $this->images;
 
         if (isset($data[$position]['path'])) echo $data[$position]['path'];
-    }
-    public function printServingTip(int $position){
-        $data = $this->serving_tips;
-
-        if (isset($data[$position]['description'])) {
-            $str = $data[$position]['description'];
-            echo "<p>${str}<p>";
-        }
-    }
-    public function printBackgroundInfo(int $position) {
-        $data = $this->background_info;
-
-        if (isset($data[$position]['description'])) echo $data[$position]['description'];
     }
 }

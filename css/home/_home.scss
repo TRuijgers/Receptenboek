@@ -4,15 +4,19 @@ $brown: #9f9466;
 $red: #953c3c;
 $white: #EEEEEE;
 
+header {
+    position: relative;
+    box-shadow: 0 0 16px $black;
+    z-index: 2;
+}
 main {
     color: $white;
     position: relative;
-    box-shadow: 0 0 16px 8px $red;
     font-family: "Cormorant Garamond", serif;
     > div:first-of-type {
         background: $red;
         div {
-            background-image:url("https://www.blueosa.com/wp-content/uploads/2020/01/the-best-top-10-indian-dishes.jpg");
+            background-image:url("../../images/the-best-top-10-indian-dishes.jpg");
             background-repeat: no-repeat;
             background-size: 100%;
             padding: 4.5rem 3rem;
@@ -98,6 +102,10 @@ main {
             }     
         }
     }
+}
+footer {
+    position: relative;
+    box-shadow: 0 0 16px $blue;
 }
 @media only screen and (max-width: 481.6px) {
     main {

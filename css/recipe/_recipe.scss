@@ -168,6 +168,7 @@ main {
                         height: 20rem;
                         width: 100%;
                         object-fit: cover;
+                        object-position: 50% 50%;
                         position: relative;
                         top: 10%;
                         right: 10%;
@@ -222,7 +223,6 @@ main {
                     width: 20rem;
                     position: relative;
                     top: 5%;
-                    right: 5%;
                     margin-bottom: 1rem;
                     margin-right: 15vw;
                     background-color: #EEEEEE;
@@ -321,6 +321,20 @@ main {
             border-radius: 50%;
         }
         @media screen and (min-width: 1280px) {
+            .primary-div-right {
+                > div:nth-of-type(1) {
+                    .image-container {
+                        left: 8%;
+                    }
+                }
+            }
+            .primary-div-left {
+                > div:nth-of-type(1) {
+                    .image-container {
+                        right: 5%;
+                    }
+                }
+            }
             > div:nth-of-type(2) {
                 padding: 3vw 12vw;
             }
@@ -337,7 +351,6 @@ main {
                     .image-container {
                         height: 18rem;
                         width: 18rem;
-                        top: 5%;
                         margin: 0 0 1rem 2rem;
                         img {
                             height: 18rem;
@@ -383,8 +396,6 @@ main {
                     .image-container {
                         height: 18rem;
                         width: 18rem;
-                        top: 5%;
-                        right: 0%;
                         margin: 0 2rem 1rem 0;
                         img {
                             height: 18rem;
@@ -411,16 +422,53 @@ main {
                 flex-flow: column nowrap;
             }
         }
+        @media screen and (max-width: 300px) {
+            .primary-div-right {
+                > div:nth-of-type(1) {
+                    .image-container {
+                        height: 13rem;
+                        width: 13rem;
+                        img {
+                            height: 13rem;
+                        }
+                    }
+                }
+            }
+            .primary-div-left {
+                > div:nth-of-type(1) {
+                    .image-container {
+                        height: 13rem;
+                        width: 13rem;
+                        img {
+                            height: 13rem;
+                        }
+                    }
+                }
+            }
+        }
     }
     @media only screen and (min-width: 600px) and (max-width: 1280px) {
         section:nth-of-type(1) {
             .primary-div-right {
+                > div:nth-of-type(1) {
+                    .image-container {
+                        right: 4%;
+                    }
+                }
                 > .title-container {
                     h2 {
                         width: 80%;
                         position: relative;
                         margin-left: 0;
                     }
+                }
+            }
+            .primary-div-left {
+                > div:nth-of-type(1) {
+                    .image-container {
+                        left: 4%;
+                    }
+
                 }
             }
         }
