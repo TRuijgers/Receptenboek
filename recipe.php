@@ -3,7 +3,7 @@ require_once('./classes/connect.php');
 require_once('./classes/content.php');
 require_once('./classes/recipe_content.php');
 
-$contentLoader = new Content(Connect::connectToDB());
+$contentLoader = new Content(Connect::connectToDB("root", ""));
 $contentDistributor = $contentLoader->feedRecipePage();
 
 ?>
