@@ -18,7 +18,7 @@ abstract class Misc {
     public static function checkIngredientQuantity(array $ingredient) : string{
         $quantity = isset($ingredient['quantity'])? "<span class=\"quantity\">${ingredient['quantity']}</span>\n" : "";
 
-        if (isset($ingredient['unit'])) $quantity .= "<span class=\"unit\">${ingredient['unit']}</span>\n";
+        $quantity .= isset($ingredient['unit'])? "<span class=\"unit\">${ingredient['unit']}</span>\n" : "";
         return $quantity;
     }
 }
