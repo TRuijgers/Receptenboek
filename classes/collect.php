@@ -47,8 +47,7 @@ class Collect {
         $query = "SELECT * FROM `${bridge_table}`
             RIGHT JOIN `${table}` 
             ON `${bridge_table}`.`${column}` = `${table}`.`id` 
-            WHERE `${bridge_table}`.`recipes_id` = :id
-            ${condition}";
+            WHERE `${bridge_table}`.`recipes_id` = :id ${condition}";
         $statement = $this->pdo->prepare($query);
 
         $statement->execute(array(

@@ -79,7 +79,7 @@ header > div div .nav-link {
   text-decoration: none;
   color: #EEEEEE;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 600px) {
   header h1 {
     margin-left: 0;
   }
