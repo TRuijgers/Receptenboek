@@ -33,18 +33,68 @@
             <form action="">
                 <div><h2>Invoegformulier</h2></div>
                 <section id="basic">
-                    <div id="recipes"></div>
-                    <div id="images"></div>
-                    <div id="background_info"></div>
+                    <div id="recipes">
+                        <input type="text" name="title" placeholder="Naam" required>
+                        <input type="text" name="origin" placeholder="Cuisine">
+                        <select type="text" name="theme" size="4">
+                            <option value="default">Standaard</option>
+                            <option value="blue">Blauw</option>
+                            <option value="red">Rood</option>
+                            <option value="orange">Oranje</option>
+                        </select>
+                        <input type="checkbox" name="vegetarian">
+                        <input type="checkbox" name="vegan">
+                        <input type="checkbox" name="spicy">
+                        <input type="text" name="serving tip" placeholder="Serveertip(s)">
+                        <input type="number" name="quantity" required>
+                        <select type="text" name="unit" required>
+                            <option value="Personen">Personen</option>
+                            <option value="Porties">Porties</option>
+                        </select>
+                    </div>
+                    <div id="images">
+                        <h3>Afbeeldingen</h3>
+                        <input type="text" placeholder="Afbeelding 1">
+                        <input type="text" placeholder="Afbeelding 2">
+                        <input type="text" placeholder="Afbeelding 3">
+                    </div>
+                    <div id="background_info">
+                        <h3>Achtergrondinformatie</h3>
+                        <input type="text" placeholder="Infobox 1">
+                        <input type="text" placeholder="Infobox 2">
+                    </div>
                 </section>
                 <section id="lists">
-                    <div id="ingredients"></div>
-                    <div id="tools"></div>
-                    <div id="preparation"></div>
+                    <div id="ingredients">
+                        <h3>Ingrediënten</h3>
+                        <ul>
+                            <li>
+                                <input type="text" name="name" placeholder="Naam ingrediënt" required>
+                                <input type="number" name="quantity">
+                                <input type="text" name="unit" placeholder="Maateenheid">
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tools">
+                        <h3>Hulpmiddelen</h3>
+                        <ul>
+                            <li>
+                                <input type="text" name="name" placeholder="Naam hulpmiddel">
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="preparation">
+                        <h4>Bereiding stappen</h4>
+                        <ol>
+                            <li>
+                                <input type="text" name="description" placeholder="Bereiding stap" required>
+                            </li>
+                        </ol>
+                    </div>
                 </section>
                 <div>
                     <p>Velden met een * zijn verplicht.</p>
-                    <input type="submit">
+                    <input type="submit" value="Verzenden">
                 </div>
             </form>
         </article>

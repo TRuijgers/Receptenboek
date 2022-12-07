@@ -39,18 +39,17 @@ class RecipeContent {
 
         $list_string = "";
         foreach ($data as $key_a=>$list){
-            $list_string .= "<ul>". $this->printSegment($list) . $this->printIngredient($data, $key_a) ."</ul>";
+            $list_string .= "<ul>". $this->printSublist($list) . $this->printIngredient($data, $key_a) ."</ul>";
         }
         echo $list_string;
     }
-    public function printSegment(array $list){
+    private function printSublist(array $list){
         $title = "Ingrediënten";
-        if (isset($list[0]['segment'])){
-            $title = $list[0]['segment'];
-        }
+        if (isset($list[0]['sublist'])) $title = $list[0]['sublist'];
+
         return "<h5>${title}:</h5>";
     }
-    public function printIngredient(array $data, int $key){
+    private function printIngredient(array $data, int $key){
         $list_string = "";
         foreach ($data[$key] as $key_b=>$ingredient){
             $quantity = Misc::checkIngredientQuantity($ingredient);

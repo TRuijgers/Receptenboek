@@ -20,7 +20,7 @@ class Content {
     public function feedRecipePage(){
         $recipe_data = $this->dataMap->fetchRecipe();
         $image_data = $this->dataMap->fetchJoinedData('images', 'ORDER BY recipes_images.sequence ASC');
-        $ingredient_data = $this->dataMap->fetchJoinedData('ingredients', 'ORDER BY recipes_ingredients.segment ASC');
+        $ingredient_data = $this->dataMap->fetchJoinedData('ingredients', 'ORDER BY recipes_ingredients.sublist ASC');
         $preparation_data = $this->dataMap->fetchJoinedData('preparation', 'ORDER BY recipes_preparation.sequence ASC');
         $tool_data = $this->dataMap->fetchJoinedData('tools');
         $background_data = $this->dataMap->fetchJoinedData('background_info', 'ORDER BY recipes_background_info.sequence ASC');
