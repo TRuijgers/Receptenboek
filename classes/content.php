@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 require_once('./classes/collect.php');
-require_once('./classes/recipe_content.php');
-require_once('./classes/home_content.php');
+require_once('./classes/recipepage_content.php');
+require_once('./classes/homepage_content.php');
 
-class Content {
+class FeedContent {
     private $dataMap;
 
     public function __construct($dataMap)
