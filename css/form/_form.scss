@@ -10,7 +10,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
     background-color: $white;
     main {
         display: flex;
@@ -24,6 +23,8 @@ body {
             min-height: 60vh;
             min-width: 60vw;
             max-width: 80vw;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
             border-radius: 1rem;
             box-shadow: 0 0 16px $gray;
             section {

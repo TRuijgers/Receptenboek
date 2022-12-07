@@ -35,7 +35,7 @@
                 <section id="basic">
                     <div id="recipes">
                         <input type="text" name="title" placeholder="Naam" required>
-                        <input type="text" name="origin" placeholder="Cuisine">
+                        <input type="text" name="origin" placeholder="Herkomst, bvb. 'Grieks'">
                         <select type="text" name="theme" size="4">
                             <option value="default">Standaard</option>
                             <option value="blue">Blauw</option>
@@ -54,14 +54,11 @@
                     </div>
                     <div id="images">
                         <h3>Afbeeldingen</h3>
-                        <input type="text" placeholder="Afbeelding 1">
-                        <input type="text" placeholder="Afbeelding 2">
-                        <input type="text" placeholder="Afbeelding 3">
+                        <input type="text" placeholder="Afbeelding">
                     </div>
                     <div id="background_info">
                         <h3>Achtergrondinformatie</h3>
-                        <input type="text" placeholder="Infobox 1">
-                        <input type="text" placeholder="Infobox 2">
+                        <textarea placeholder="Infobox"></textarea>
                     </div>
                 </section>
                 <section id="lists">
@@ -69,9 +66,9 @@
                         <h3>Ingrediënten</h3>
                         <ul>
                             <li>
-                                <input type="text" name="name" placeholder="Naam ingrediënt" required>
                                 <input type="number" name="quantity">
                                 <input type="text" name="unit" placeholder="Maateenheid">
+                                <input type="text" name="name" placeholder="Naam ingrediënt" required>
                             </li>
                         </ul>
                     </div>
