@@ -20,19 +20,18 @@ class RecipeContent {
     public function printRecipeContent(string $column){
         $data = $this->recipes;
         
-        if (isset($data[$column])) echo $data[$column];
+        echo isset($data[$column])? $data[$column] : "";
     }
     public function printBackgroundInfo(int $position) {
         $data = $this->background_info;
-        if (isset($data[$position]['description'])){
-            $info = $data[$position]['description'];
-        }
+        $info = isset($data[$position]['description'])? $data[$position]['description'] : "";
+
         echo "<p>${info}</p>";
     }
     public function printServingTip() {
         $data = $this->recipes;
 
-        if (isset($data['serving_tip'])) echo "<h4>Serveertip:</h4><p>${data['serving_tip']}</p>";
+        echo isset($data['serving_tip'])? "<h4>Serveertip:</h4><p>${data['serving_tip']}</p>" : "";
     }
     public function printIngredientsList(){
         $data = Misc::sortIngredients($this->ingredients);
@@ -44,8 +43,7 @@ class RecipeContent {
         echo $list_string;
     }
     private function printSublist(array $list){
-        $title = "Ingrediënten";
-        if (isset($list[0]['sublist'])) $title = $list[0]['sublist'];
+        $title = isset($list[0]['sublist'])? $list[0]['sublist'] : "Ingrediënten";
 
         return "<h5>${title}:</h5>";
     }
@@ -80,6 +78,6 @@ class RecipeContent {
     public function printImage(int $position){
         $data = $this->images;
 
-        if (isset($data[$position]['path'])) echo $data[$position]['path'];
+        echo isset($data[$position]['path'])? $data[$position]['path'] : "";
     }
 }

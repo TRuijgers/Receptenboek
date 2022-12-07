@@ -6,18 +6,19 @@ const quantity = document.querySelectorAll("li > .quantity");
 
 var index = 1;
 var prevMultiplier = 1;
-var multiplier = 0;
-
+var multiplier = 1;
+var displayValue = Math.round(parseFloat(quantityDisplay.innerText) * 1000) / 1000;
 
 function checkOperation(e){
-    var displayValue = Math.round((parseFloat(quantityDisplay.innerText) * multiplier) * 1000);
     if (e.target.id == "plus" && index <= 15){
         index += 0.25;
         multiplier = index / 1;
+        displayValue = displayValue / prevMultiplier * multiplier;
         multiplyQuantity(multiplier);
     } else if (e.target.id == "minus" && (index > 0.25 && displayValue > 1)){
         index -= 0.25;
         multiplier = index;
+        displayValue = displayValue / prevMultiplier * multiplier;
         multiplyQuantity(multiplier);
     }
 }

@@ -1,9 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 require_once('./classes/connect.php');
-require_once('./classes/content.php');
-require_once('./classes/home_content.php');
+require_once('./classes/feedcontent.php');
+require_once('./classes/homepage_content.php');
 
-$contentLoader = new Content(Connect::connectToDB());
+$contentLoader = new FeedContent(Connect::connectToDB("root", ""));
 $contentDistributor = $contentLoader->feedHomePage();
 
 ?>
@@ -29,7 +29,7 @@ $contentDistributor = $contentLoader->feedHomePage();
     <main>
         <div>
             <div>
-                <h1>Welkom bij,<br> Receptenboek</h1>
+                <h1>Welkom bij,<br> MijnReceptenboek</h1>
             </div>
         </div>
         <div class="aboutUs">
