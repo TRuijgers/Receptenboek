@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 require_once('./classes/collect.php');
 
-class Connect {
+abstract class Connect {
     public static function connectToDB(){  
         $username = "root";
         $password = "";

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-class Misc {
+abstract class Misc {
     public static function sortIngredients(array $ingredients){
         $sorted_data = array(array());
         $count = 0;
