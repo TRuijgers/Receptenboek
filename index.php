@@ -1,6 +1,6 @@
 <?php
 require_once('./classes/connect.php');
-require_once('./classes/content.php');
+require_once('./classes/feedcontent.php');
 require_once('./classes/homepage_content.php');
 
 $contentLoader = new FeedContent(Connect::connectToDB("root", ""));
