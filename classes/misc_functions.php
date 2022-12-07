@@ -5,8 +5,8 @@ abstract class Misc {
         $sorted_data = array(array());
         $count = 0;
         for ($i = 0; $i < count($ingredients); $i++){
-            if (isset($ingredients[$i-1]['segment'])) {
-                if (!($ingredients[$i]['segment'] == $sorted_data[$count][0]['segment'])) {
+            if (isset($ingredients[$i-1]['sublist'])) {
+                if (!($ingredients[$i]['sublist'] == $sorted_data[$count][0]['sublist'])) {
                     $count++;
                     array_push($sorted_data, array());
                 }
