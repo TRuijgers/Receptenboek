@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 abstract class Misc {
-    public static function sortIngredients(array $ingredients){
+    public static function sortIngredients(array $ingredients) : array{
         $sorted_data = array(array());
         $count = 0;
         for ($i = 0; $i < count($ingredients); $i++){
@@ -15,7 +15,7 @@ abstract class Misc {
         }
         return $sorted_data;
     }
-    public static function checkIngredientQuantity(array $ingredient){
+    public static function checkIngredientQuantity(array $ingredient) : string{
         $quantity = isset($ingredient['quantity'])? "<span class=\"quantity\">${ingredient['quantity']}</span>\n" : "";
 
         if (isset($ingredient['unit'])) $quantity .= "<span class=\"unit\">${ingredient['unit']}</span>\n";
