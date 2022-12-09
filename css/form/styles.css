@@ -9,12 +9,11 @@ body main {
   align-content: center;
   justify-content: center;
 }
-body main form {
+body main article form {
   display: flex;
   flex-flow: row wrap;
   align-content: space-between;
   justify-content: center;
-  min-height: 60vh;
   min-width: 60vw;
   max-width: 80vw;
   margin-top: 5rem;
@@ -22,10 +21,33 @@ body main form {
   border-radius: 1rem;
   box-shadow: 0 0 16px #CBCBCB;
 }
-body main form section {
-  width: 100%;
+body main article form input, body main article form option, body main article form textarea, body main article form select {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  border: 0;
 }
-body main form > div:nth-of-type(1) {
+body main article form input, body main article form textarea, body main article form select {
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0 4px #94BCEB;
+  border-radius: 0.5rem;
+}
+body main article form input[type=number] {
+  width: 3.5rem;
+}
+body main article form select[name=theme], body main article form select[name=unit] {
+  width: 7rem;
+}
+body main article form input[name=origin] {
+  width: 11rem;
+}
+body main article form textarea {
+  resize: vertical;
+}
+body main article form section {
+  width: 100%;
+  padding: 1rem;
+}
+body main article form > div:nth-of-type(1) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,10 +58,66 @@ body main form > div:nth-of-type(1) {
   width: 100%;
   border-bottom: 1px solid #34535e;
 }
-body main form > div:nth-of-type(1) h2 {
+body main article form > div:nth-of-type(1) h2 {
   font-size: 2rem;
 }
-body main form > div:nth-of-type(2) {
+body main article form > section:nth-of-type(1) {
+  display: flex;
+  flex-flow: column wrap;
+}
+body main article form > section:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 50%;
+  padding: 0.5rem;
+}
+body main article form > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  flex-flow: row wrap;
+  width: 30%;
+}
+body main article form > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > label {
+  width: 60%;
+}
+body main article form > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > input {
+  height: 0.8rem;
+  width: 0.8rem;
+  margin-top: 0.2rem;
+}
+body main article form > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 30%;
+  margin-top: 0.5rem;
+}
+body main article form > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) input[name=quantity] {
+  height: 1.4rem;
+}
+body main article form > section:nth-of-type(1) #background-info, body main article form > section:nth-of-type(1) #images {
+  display: flex;
+  flex-flow: column nowrap;
+}
+body main article form > section:nth-of-type(1) #recipes {
+  height: 100%;
+}
+body main article form > section:nth-of-type(2) {
+  display: flex;
+  justify-content: space-evenly;
+}
+body main article form > section:nth-of-type(2) > div {
+  padding: 0.5rem;
+}
+body main article form > section:nth-of-type(2) > div:nth-of-type(1) > ul > li input[name=unit] {
+  width: 2rem;
+}
+body main article form > section:nth-of-type(2) > div:nth-of-type(2) .button-container {
+  margin-left: -0.5rem;
+}
+body main article form > section:nth-of-type(2) > div:nth-of-type(3) .button-container {
+  margin-left: -1rem;
+}
+body main article form > section:nth-of-type(2) ul, body main article form > section:nth-of-type(2) ol {
+  padding-left: 1rem;
+}
+body main article form > div:nth-of-type(2) {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -48,7 +126,7 @@ body main form > div:nth-of-type(2) {
   position: relative;
   border-top: 1px solid #34535e;
 }
-body main form > div:nth-of-type(2) > p {
+body main article form > div:nth-of-type(2) > p {
   height: 30%;
   width: 30%;
   position: relative;
@@ -57,7 +135,7 @@ body main form > div:nth-of-type(2) > p {
   font-size: 1rem;
   font-weight: bold;
 }
-body main form > div:nth-of-type(2) input[type=submit] {
+body main article form > div:nth-of-type(2) input[type=submit] {
   width: 20%;
   margin: 1rem auto;
   border: 1px solid #3E87DA;
@@ -66,9 +144,48 @@ body main form > div:nth-of-type(2) input[type=submit] {
   font-size: 1.2rem;
   font-weight: bold;
 }
-body main form > div:nth-of-type(2) input[type=submit]:hover {
+body main article form > div:nth-of-type(2) input[type=submit]:hover {
   color: #EDEDED;
   background-color: #3E87DA;
+}
+body main article form .required {
+  color: #d1232f;
+}
+body main article form .plus {
+  color: #3E87DA;
+  box-shadow: 0 0 4px #3E87DA;
+}
+body main article form .plus:hover {
+  color: #EDEDED;
+  background-color: #3E87DA;
+}
+body main article form .minus {
+  color: #d1232f;
+  box-shadow: 0 0 4px #d1232f;
+}
+body main article form .minus:hover {
+  color: #EDEDED;
+  background-color: #d1232f;
+}
+
+.button, body main article form .plus, body main article form .minus {
+  height: 1.8rem;
+  width: 1.8rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #EDEDED;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  left: 90%;
 }
 
 body {

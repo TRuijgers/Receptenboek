@@ -21,9 +21,9 @@ class FeedContent {
         $recipe_data = $this->dataMap->fetchRecipe();
         $image_data = $this->dataMap->fetchJoinedData('images', 'ORDER BY recipes_images.sequence ASC');
         $ingredient_data = $this->dataMap->fetchJoinedData('ingredients', 'ORDER BY recipes_ingredients.sublist ASC');
-        $preparation_data = $this->dataMap->fetchJoinedData('preparation', 'ORDER BY recipes_preparation.sequence ASC');
+        $preparation_data = $this->dataMap->fetchDataById('preparation', 'ORDER BY preparation.sequence ASC');
         $tool_data = $this->dataMap->fetchJoinedData('tools');
-        $background_data = $this->dataMap->fetchJoinedData('background_info', 'ORDER BY recipes_background_info.sequence ASC');
+        $background_data = $this->dataMap->fetchDataById('background_info', 'ORDER BY background_info.sequence ASC');
 
         $data_bundle = new RecipeContent($recipe_data, $image_data, $ingredient_data, $preparation_data, $tool_data, $background_data);
 

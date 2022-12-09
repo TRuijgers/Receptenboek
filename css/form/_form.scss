@@ -15,64 +15,193 @@ body {
         display: flex;
         align-content: center;
         justify-content: center;
-        form {
-            display: flex;
-            flex-flow: row wrap;
-            align-content: space-between;
-            justify-content: center;
-            min-height: 60vh;
-            min-width: 60vw;
-            max-width: 80vw;
-            margin-top: 5rem;
-            margin-bottom: 5rem;
-            border-radius: 1rem;
-            box-shadow: 0 0 16px $gray;
-            section {
-                width: 100%;
-            }
-            > div:nth-of-type(1) {
+        article {
+            form {
                 display: flex;
+                flex-flow: row wrap;
+                align-content: space-between;
                 justify-content: center;
-                align-items: center;
-                min-height: fit-content;
-                height: 5vh;
-                width: 100%;
-                border-bottom: 1px solid $gray-blue;
-                h2 {
-                    font-size: 2rem;
-                }
-            }
-            > div:nth-of-type(2) {
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: center;
-                height: 15%;
-                width: 100%;
-                position: relative;
-                border-top: 1px solid $gray-blue;
-                > p {
-                    height: 30%;
-                    width: 30%;
-                    position: relative;
-                    left: 70%;
-                    color: $bright-red;
-                    font-size: 1rem;
-                    font-weight: bold;
-                }
-                input[type=submit] {
-                    width: 20%;
-                    margin: 1rem auto;
-                    border: 1px solid $blue;
-                    border-radius: 0.5rem;
+                min-width: 60vw;
+                max-width: 80vw;
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+                border-radius: 1rem;
+                box-shadow: 0 0 16px $gray;
+                input, option, textarea, select {
                     font-family: 'Cormorant Garamond', serif;
-                    font-size: 1.2rem;
-                    font-weight: bold;
+                    font-size: 1rem;
+                    border: 0;
+                }
+                input, textarea, select {
+                    margin-bottom: 0.5rem;
+                    box-shadow: 0 0 4px $light-blue;
+                    border-radius: 0.5rem;
+                }
+                input[type=number] {
+                    width: 3.5rem;
+                }
+                select[name=theme], select[name=unit] {
+                    width: 7rem;
+                }
+                input[name=origin] {
+                    width: 11rem;
+                }
+                textarea {
+                    resize: vertical;
+                }
+                section {
+                    width: 100%;
+                    padding: 1rem;
+                }
+                > div:nth-of-type(1) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: fit-content;
+                    height: 5vh;
+                    width: 100%;
+                    border-bottom: 1px solid $gray-blue;
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+                > section:nth-of-type(1) {
+                    display: flex;
+                    flex-flow: column wrap;
+                    > div:nth-of-type(1) {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        width: 50%;
+                        padding: 0.5rem;
+                        > div:nth-of-type(1) {
+                            display: flex;
+                            flex-flow: row wrap;
+                            width: 30%;
+                            > label {
+                                width: 60%;
+                            }
+                            > input {
+                                height: 0.8rem;
+                                width: 0.8rem;
+                                margin-top: 0.2rem;
+                            }
+                        }
+                        > div:nth-of-type(2) {
+                            width: 30%;
+                            margin-top: 0.5rem;
+                            input[name=quantity]{
+                                height: 1.4rem;
+                            }
+                        }
+                    }
+                    #background-info, #images  {
+                        display: flex;
+                        flex-flow: column nowrap;
+                    }
+                    #recipes {
+                        height: 100%;
+                    }
+                }
+                > section:nth-of-type(2) {
+                    display: flex;
+                    justify-content: space-evenly;
+                    > div {
+                        padding: 0.5rem;
+                    }
+                    > div:nth-of-type(1) {
+                        > ul {
+                            > li {
+                                input[name=unit] {
+                                    width: 2rem;
+                                }
+                            }
+                        }
+                    }
+                    > div:nth-of-type(2) {
+                        .button-container {
+                            margin-left: -0.5rem;
+                        }
+                    }
+                    > div:nth-of-type(3) {
+                        .button-container {
+                            margin-left: -1rem;
+                        }
+                    }
+                    ul, ol {
+                        padding-left: 1rem;
+                    }
+                }
+                > div:nth-of-type(2) {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    height: 15%;
+                    width: 100%;
+                    position: relative;
+                    border-top: 1px solid $gray-blue;
+                    > p {
+                        height: 30%;
+                        width: 30%;
+                        position: relative;
+                        left: 70%;
+                        color: $bright-red;
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                    input[type=submit] {
+                        width: 20%;
+                        margin: 1rem auto;
+                        border: 1px solid $blue;
+                        border-radius: 0.5rem;
+                        font-family: 'Cormorant Garamond', serif;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        &:hover {
+                            color: $white;
+                            background-color: $blue;
+                        }
+                    }
+                }
+                .required {
+                    color: $bright-red;
+                }
+                .plus {
+                    @extend .button;
+                    color: $blue;
+                    box-shadow: 0 0 4px $blue;
                     &:hover {
                         color: $white;
                         background-color: $blue;
                     }
                 }
+                .minus {
+                    @extend .button;
+                    color: $bright-red;
+                    box-shadow: 0 0 4px $bright-red;
+                    &:hover {
+                        color: $white;
+                        background-color: $bright-red;
+                    }
+                }
             }
         }
     }
+}
+.button {
+    height: 1.8rem;
+    width: 1.8rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: $white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    left: 90%;
 }

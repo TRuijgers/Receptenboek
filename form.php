@@ -32,44 +32,68 @@
         <article>
             <form action="">
                 <div><h2>Invoegformulier</h2></div>
+                <h3>Basis info</h3>
                 <section id="basic">
                     <div id="recipes">
+                        <label for="title">Titel<span class="required">&ast;</span></label>
                         <input type="text" name="title" placeholder="Naam" required>
+                        <label for="origin">Herkomst</label>
                         <input type="text" name="origin" placeholder="Herkomst, bvb. 'Grieks'">
+                        <label for="theme">Thema</label>
                         <select type="text" name="theme" size="4">
-                            <option value="default">Standaard</option>
+                            <option value="default" selected="selected">Standaard</option>
                             <option value="blue">Blauw</option>
                             <option value="red">Rood</option>
                             <option value="orange">Oranje</option>
                         </select>
-                        <input type="checkbox" name="vegetarian">
-                        <input type="checkbox" name="vegan">
-                        <input type="checkbox" name="spicy">
-                        <input type="text" name="serving tip" placeholder="Serveertip(s)">
-                        <input type="number" name="quantity" required>
-                        <select type="text" name="unit" required>
-                            <option value="Personen">Personen</option>
-                            <option value="Porties">Porties</option>
-                        </select>
+                        <div>
+                            <label for="vegetarian">Vegetarisch</label>
+                            <input type="checkbox" name="vegetarian">
+                            <label for="vegan">Vegan</label>
+                            <input type="checkbox" name="vegan">
+                            <label for="spicy">Spicy</label>
+                            <input type="checkbox" name="spicy">
+                        </div>
+                        <label for="serving tip">Serveertip</label>
+                        <textarea name="serving tip" placeholder="Serveertip(s)"></textarea>
+                        <div>
+                            <label for="quantity">Aantal<span class="required">&ast;</span></label>
+                            <input type="number" name="quantity" required>
+                            <select type="text" name="unit" size="2" required>
+                                <option value="Personen" selected="selected">Personen</option>
+                                <option value="Porties">Porties</option>
+                            </select>
+                        </div>
+
                     </div>
                     <div id="images">
-                        <h3>Afbeeldingen</h3>
-                        <input type="text" placeholder="Afbeelding">
+                        <label for="afbeelding">Afbeeldingen (Maximaal 3)</label>
+                        <input type="text" name="afbeelding" placeholder="Afbeelding #1">
+                        <input type="text" name="afbeelding" placeholder="Afbeelding #2">
+                        <input type="text" name="afbeelding" placeholder="Afbeelding #3">
                     </div>
-                    <div id="background_info">
-                        <h3>Achtergrondinformatie</h3>
-                        <textarea placeholder="Infobox"></textarea>
+                    <div id="background-info">
+                        <label for="background info">Achtergrondinfo (Maximaal 2)</label>
+                        <textarea name="background info" placeholder="Infobox #1"></textarea>
+                        <textarea name="background info" placeholder="Infobox #2"></textarea>
                     </div>
                 </section>
                 <section id="lists">
                     <div id="ingredients">
-                        <h3>Ingrediënten</h3>
+                        <h3>Ingrediënten (Minimaal 1)<span class="required">&ast;</span></h3>
                         <ul>
+                            <label for="quantity">Hoeveelheid</label>
+                            <label for="unit">Maateenheid</label>
+                            <label for="name">Naam</label>
                             <li>
                                 <input type="number" name="quantity">
-                                <input type="text" name="unit" placeholder="Maateenheid">
+                                <input type="text" name="unit">
                                 <input type="text" name="name" placeholder="Naam ingrediënt" required>
                             </li>
+                            <div class="button-container">
+                                <button class="plus" type="button">&plus;</button>
+                                <button class="minus" type="button">&minus;</button>
+                            </div>
                         </ul>
                     </div>
                     <div id="tools">
@@ -78,14 +102,22 @@
                             <li>
                                 <input type="text" name="name" placeholder="Naam hulpmiddel">
                             </li>
+                            <div class="button-container">
+                                <button class="plus" type="button">&plus;</button>
+                                <button class="minus" type="button">&minus;</button>
+                            </div>
                         </ul>
                     </div>
                     <div id="preparation">
-                        <h4>Bereiding stappen</h4>
+                        <h3>Bereiding stappen (Minimaal 1)<span class="required">&ast;</span></h3>
                         <ol>
                             <li>
-                                <input type="text" name="description" placeholder="Bereiding stap" required>
+                                <textarea name="description" placeholder="Bereiding stap" required></textarea>
                             </li>
+                            <div class="button-container">
+                                <button class="plus" type="button">&plus;</button>
+                                <button class="minus" type="button">&minus;</button>
+                            </div>
                         </ol>
                     </div>
                 </section>

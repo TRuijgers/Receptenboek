@@ -41,7 +41,17 @@ class Collect {
  
         return $statement->fetchAll();
     }
-    public function fetchJoinedData(string $table, string $condition = '') : array{
+    public function fetchDataById(string $table) : array {
+        $query = "SELECT * FROM `${table}` WHERE `${table}`.`recipes_id` = :id ORDER BY `${table}`.sequence ASC";
+
+        $statement = $this->pdo->prepare($query);
+
+        $statement->execute(array(
+            ':id' => $_GET['id']
+        ));
+        return $statement->fetchAll();
+    }
+    public function fetchJoinedData(string $table, string $condition = '') : array {
         $bridge_table = 'recipes_' . $table;
         $column = $table . '_id';
         $query = "SELECT * FROM `${bridge_table}`
