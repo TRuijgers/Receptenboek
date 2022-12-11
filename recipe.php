@@ -29,7 +29,9 @@ $contentDistributor = $contentLoader->feedRecipePage();
     <?php include_once('./components/header.php'); ?>
     <main>
         <?php 
-            for ($i=1; $i<=3; $i++) include_once("./components/section_${i}.php");
+            include_once("./components/section_title.php");
+            include_once("./components/section_ingredients.php");
+            include_once("./components/section_preparation.php");
         ?>
     </main>
     <?php include_once('./components/footer.php'); ?>

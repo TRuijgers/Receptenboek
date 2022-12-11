@@ -16,9 +16,7 @@
         </div>
         <div class="secondary-div">
             <div>
-                <p>
-                    <?php $contentDistributor->printBackgroundInfo(1); ?>
-                </p>
+                <?php $contentDistributor->printBackgroundInfo(1); ?>
                 <span></span>
             </div>
         </div>
