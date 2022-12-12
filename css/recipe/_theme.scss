@@ -11,10 +11,13 @@ main {
         }
         .secondary-div {
             > div {
-                border: 1px solid $color1;
-                > span {
-                    background-color: $color3;
+                > p {
+                    border: 1px solid $color1;
+                    > span {
+                        background-color: $color3;
+                    }
                 }
+
             }
         }
     }

@@ -17,7 +17,6 @@
         <div class="secondary-div">
             <div>
                 <?php $contentDistributor->printBackgroundInfo(1); ?>
-                <span></span>
             </div>
         </div>
     </section>
