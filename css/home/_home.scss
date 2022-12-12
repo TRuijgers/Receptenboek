@@ -3,6 +3,7 @@ $blue: #34535e;
 $brown: #9f9466;
 $red: #953c3c;
 $white: #EEEEEE;
+$light-gray: rgb(172, 172, 172);
 
 header {
     position: relative;
@@ -49,7 +50,7 @@ main {
             flex-wrap: wrap;
             flex: 1;
             justify-content: center;
-            width: 60%;
+            width: 75%;
             margin-left: auto;
             margin-right: auto;
             li {
@@ -83,15 +84,17 @@ main {
                         transform: translate(-50%, -50%);
                         display: flex;
                         border-radius: 1rem;
+                        box-shadow: 0 0 8px $light-gray;
                         justify-content: center;
                         cursor: pointer;
                         h3 {
                             display: none;
                             font-family: "Cormorant Garamond", serif;
                             padding-top: 2rem;
-                            font-size: 3rem;
+                            font-size: 2.5rem;
                             color: $white;
                             font-weight: 600;
+                            text-shadow: 1px 1px 0.5px $black;
                         }
                     }
                     div:hover {

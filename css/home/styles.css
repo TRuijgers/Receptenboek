@@ -46,7 +46,7 @@ main ul form {
   flex-wrap: wrap;
   flex: 1;
   justify-content: center;
-  width: 60%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -84,6 +84,7 @@ main ul form li button div {
   transform: translate(-50%, -50%);
   display: flex;
   border-radius: 1rem;
+  box-shadow: 0 0 8px rgb(172, 172, 172);
   justify-content: center;
   cursor: pointer;
 }
@@ -91,9 +92,10 @@ main ul form li button div h3 {
   display: none;
   font-family: "Cormorant Garamond", serif;
   padding-top: 2rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #EEEEEE;
   font-weight: 600;
+  text-shadow: 1px 1px 0.5px #141E27;
 }
 main ul form li button div:hover {
   -webkit-backdrop-filter: blur(0.2rem);
