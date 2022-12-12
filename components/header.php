@@ -1,6 +1,6 @@
 <?php ?>
     <header>
-        <h1>MijnReceptenboek</h1>
+        <h1><a href="index.php" class="nav-link">MijnReceptenboek</a></h1>
         <div>
             <div>
                 <a href="index.php" class="nav-link">Home</a>

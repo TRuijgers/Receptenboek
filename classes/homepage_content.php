@@ -13,7 +13,7 @@ class HomeContent {
         $recipe_data = $this->recipes;
         $image_data = $this->images;
         
-        for ($i = 0; $i < 3; $i++){
+        for ($i = 0; $i < 6; $i++){
             echo $this->printListItem($recipe_data[$i], $i);
         }
     }

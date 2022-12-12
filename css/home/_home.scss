@@ -49,6 +49,9 @@ main {
             flex-wrap: wrap;
             flex: 1;
             justify-content: center;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
             li {
                 margin: 0.5rem;
                 display: flex;

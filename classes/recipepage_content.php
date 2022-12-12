@@ -24,9 +24,10 @@ class RecipeContent {
     }
     public function printBackgroundInfo(int $position) {
         $data = $this->background_info;
-        $info = isset($data[$position]['description'])? $data[$position]['description'] : "";
-
-        echo "<p>${info}<span></p>";
+        if (isset($data[$position]['description'])) {
+            $info = ($data[$position]['description']);
+            echo "<p>${info}<span></p>";
+        }
     }
     public function printServingTip() {
         $data = $this->recipes;

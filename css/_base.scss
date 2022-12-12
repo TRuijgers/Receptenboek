@@ -19,6 +19,10 @@ header {
         margin-top: 0.8rem;
         margin-left: 4rem;
         justify-content: center;
+        > a {
+            text-decoration: none;
+            color: $white;
+        }
     }
     > div {
         display: flex;

@@ -4,7 +4,7 @@ body {
   background-color: black;
 }
 body.blue main section:nth-of-type(1) {
-  background-color: #1D5596;
+  background-color: #2161aa;
 }
 body.blue main section:nth-of-type(1) .primary-div-right .text-container p {
   background-color: #3E87DA;
@@ -13,16 +13,16 @@ body.blue main section:nth-of-type(1) .secondary-div > div > p {
   border: 1px solid #94BCEB;
 }
 body.blue main section:nth-of-type(1) .secondary-div > div > p > span {
-  background-color: #1D5596;
+  background-color: #2161aa;
 }
 body.blue main section:nth-of-type(3) .primary-div-right .text-container h4 {
-  border-bottom: 1px solid #1D5596;
+  border-bottom: 1px solid #2161aa;
 }
 body.blue main section:nth-of-type(3) .primary-div-right .text-container > div, body.blue main section:nth-of-type(3) .primary-div-right .text-container > p {
   background-color: #3E87DA;
 }
 body.blue main section {
-  background-color: #1D5596;
+  background-color: #2161aa;
 }
 body.blue main section .primary-div-left {
   box-shadow: 0 0 16px #3E87DA;
@@ -48,8 +48,53 @@ body.blue main section .primary-div-right .image-container {
 body.blue main section .li-separator {
   border: 0.5px solid #94BCEB;
 }
+body.green main section:nth-of-type(1) {
+  background-color: #71a92d;
+}
+body.green main section:nth-of-type(1) .primary-div-right .text-container p {
+  background-color: #99c662;
+}
+body.green main section:nth-of-type(1) .secondary-div > div > p {
+  border: 1px solid #c5e8a0;
+}
+body.green main section:nth-of-type(1) .secondary-div > div > p > span {
+  background-color: #71a92d;
+}
+body.green main section:nth-of-type(3) .primary-div-right .text-container h4 {
+  border-bottom: 1px solid #71a92d;
+}
+body.green main section:nth-of-type(3) .primary-div-right .text-container > div, body.green main section:nth-of-type(3) .primary-div-right .text-container > p {
+  background-color: #99c662;
+}
+body.green main section {
+  background-color: #71a92d;
+}
+body.green main section .primary-div-left {
+  box-shadow: 0 0 16px #99c662;
+}
+body.green main section .primary-div-left .image-container {
+  box-shadow: inset 0 0 8px #99c662;
+}
+body.green main section .primary-div-left #option-container .quantity-text {
+  background-color: #99c662;
+}
+body.green main section .primary-div-left #option-container .quantity-option {
+  background-color: #c5e8a0;
+}
+body.green main section .primary-div-left #option-container .quantity-option > button:hover {
+  background-color: #385515;
+}
+body.green main section .primary-div-right {
+  box-shadow: 0 0 16px #99c662;
+}
+body.green main section .primary-div-right .image-container {
+  box-shadow: inset 0 0 8px #99c662;
+}
+body.green main section .li-separator {
+  border: 0.5px solid #c5e8a0;
+}
 body.red main section:nth-of-type(1) {
-  background-color: #920d16;
+  background-color: #9e101a;
 }
 body.red main section:nth-of-type(1) .primary-div-right .text-container p {
   background-color: #b9212b;
@@ -58,16 +103,16 @@ body.red main section:nth-of-type(1) .secondary-div > div > p {
   border: 1px solid #F58F96;
 }
 body.red main section:nth-of-type(1) .secondary-div > div > p > span {
-  background-color: #920d16;
+  background-color: #9e101a;
 }
 body.red main section:nth-of-type(3) .primary-div-right .text-container h4 {
-  border-bottom: 1px solid #920d16;
+  border-bottom: 1px solid #9e101a;
 }
 body.red main section:nth-of-type(3) .primary-div-right .text-container > div, body.red main section:nth-of-type(3) .primary-div-right .text-container > p {
   background-color: #b9212b;
 }
 body.red main section {
-  background-color: #920d16;
+  background-color: #9e101a;
 }
 body.red main section .primary-div-left {
   box-shadow: 0 0 16px #b9212b;
@@ -97,7 +142,7 @@ body.orange main section:nth-of-type(1) {
   background-color: #DE6202;
 }
 body.orange main section:nth-of-type(1) .primary-div-right .text-container p {
-  background-color: #FD9648;
+  background-color: #ea8a40;
 }
 body.orange main section:nth-of-type(1) .secondary-div > div > p {
   border: 1px solid #FED1AE;
@@ -109,19 +154,19 @@ body.orange main section:nth-of-type(3) .primary-div-right .text-container h4 {
   border-bottom: 1px solid #DE6202;
 }
 body.orange main section:nth-of-type(3) .primary-div-right .text-container > div, body.orange main section:nth-of-type(3) .primary-div-right .text-container > p {
-  background-color: #FD9648;
+  background-color: #ea8a40;
 }
 body.orange main section {
   background-color: #DE6202;
 }
 body.orange main section .primary-div-left {
-  box-shadow: 0 0 16px #FD9648;
+  box-shadow: 0 0 16px #ea8a40;
 }
 body.orange main section .primary-div-left .image-container {
-  box-shadow: inset 0 0 8px #FD9648;
+  box-shadow: inset 0 0 8px #ea8a40;
 }
 body.orange main section .primary-div-left #option-container .quantity-text {
-  background-color: #FD9648;
+  background-color: #ea8a40;
 }
 body.orange main section .primary-div-left #option-container .quantity-option {
   background-color: #FED1AE;
@@ -130,10 +175,10 @@ body.orange main section .primary-div-left #option-container .quantity-option > 
   background-color: #3d1302;
 }
 body.orange main section .primary-div-right {
-  box-shadow: 0 0 16px #FD9648;
+  box-shadow: 0 0 16px #ea8a40;
 }
 body.orange main section .primary-div-right .image-container {
-  box-shadow: inset 0 0 8px #FD9648;
+  box-shadow: inset 0 0 8px #ea8a40;
 }
 body.orange main section .li-separator {
   border: 0.5px solid #FED1AE;
@@ -403,6 +448,7 @@ main > section > .primary-div-left > div:nth-of-type(1) #option-container .quant
   border: none;
   font-size: 1.8rem;
   font-weight: 700;
+  cursor: pointer;
 }
 main > section > .primary-div-left > div:nth-of-type(1) #option-container .quantity-option > button:nth-of-type(1) {
   border-top-left-radius: 1rem;
@@ -576,6 +622,10 @@ header h1 {
   margin-top: 0.8rem;
   margin-left: 4rem;
   justify-content: center;
+}
+header h1 > a {
+  text-decoration: none;
+  color: #EEEEEE;
 }
 header > div {
   display: flex;

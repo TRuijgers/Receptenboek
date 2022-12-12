@@ -29,7 +29,7 @@ $contentDistributor = $contentLoader->feedHomePage();
     <main>
         <div>
             <div>
-                <h1>Welkom bij,<br> MijnReceptenboek</h1>
+                <h1>Welkom Itske, bij<br> MijnReceptenboek</h1>
             </div>
         </div>
         <div class="aboutUs">

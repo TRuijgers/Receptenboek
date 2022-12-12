@@ -10,30 +10,38 @@ body {
     overflow-x: hidden;
     background-color: black;
     &.default {
-        $color1:  #94BCEB;
-        $color2:  #FD9648;
+        $color1: #94BCEB;
+        $color2: #dd813b;
         $color3: #DE6202;
         $color4: #0C2543;
     }
     &.blue {
-        $color1:  #94BCEB;
-        $color2:  #3E87DA;
-        $color3: #1D5596;
+        $color1: #94BCEB;
+        $color2: #3E87DA;
+        $color3: #2161aa;
         $color4: #0C2543;
 
         @import "theme";
     }
+    &.green {
+        $color1: #c5e8a0;
+        $color2: #99c662;
+        $color3: #71a92d;
+        $color4: #385515;
+
+        @import "theme";
+    }
     &.red {
-        $color1:  #F58F96;
-        $color2:  #b9212b;
-        $color3: #920d16;
+        $color1: #F58F96;
+        $color2: #b9212b;
+        $color3: #9e101a;
         $color4: #380A0D;
 
         @import "theme";
     }
     &.orange {
-        $color1:  #FED1AE;
-        $color2:  #FD9648;
+        $color1: #FED1AE;
+        $color2: #ea8a40;
         $color3: #DE6202;
         $color4: #3d1302;
 
@@ -306,6 +314,7 @@ main {
                             border: none;
                             font-size: 1.8rem;
                             font-weight: 700;
+                            cursor: pointer;
                         }
                         > button:nth-of-type(1) {
                             border-top-left-radius: 1rem;
