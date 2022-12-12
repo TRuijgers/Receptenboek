@@ -20,7 +20,7 @@ main > div:first-of-type div {
 }
 main > div:first-of-type div h1 {
   font-size: 10vw;
-  text-shadow: 1px 1px black;
+  text-shadow: 0 0 6px black;
 }
 main .aboutUs {
   position: relative;
